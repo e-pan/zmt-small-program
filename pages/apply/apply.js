@@ -1,6 +1,6 @@
+const util = require('../../utils/util.js')
 // pages/apply/apply.js
 Page({
-
 	/**
 	 * 页面的初始数据
 	 */
@@ -15,6 +15,18 @@ Page({
     carBrand: '',
     carPrice: '',
     dealer: '',
+    userName: '',
+    userIDcarNumber: '',
+    userMobile: '',
+    spouseName: '',
+    spouseIDcarNumber: '',
+    spouseMobile: '',
+    isguarantee1Name: '',
+    isguarantee1IDcarNumber: '',
+    isguarantee1Mobile: '',
+    isguarantee2Name: '',
+    isguarantee2IDcarNumber: '',
+    isguarantee2Mobile: '',
     tempFilePaths: '',
     IDcardUp: '../../images/ID-car-u.png',
     IDcardDown: '../../images/ID-car-d.png',
@@ -145,6 +157,8 @@ Page({
   },
   submit() {
     // 提交前验证
-
+    if (!this.data.carBrand) {
+      util.myToast('请输入车型')
+    }
   }
 })

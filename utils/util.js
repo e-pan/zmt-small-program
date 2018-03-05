@@ -23,7 +23,16 @@ Array.prototype.baoremove = function (index) 　{
 
 const aa = () => "bbcc"
 
+const myToast =  function (title) {
+  wx.showToast({
+    title: title,
+    icon: 'none',
+    duration: 2000
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
-  aa
+  aa,
+  myToast
 }
