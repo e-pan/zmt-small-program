@@ -1,0 +1,32 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+page {
+  font-family: helvetica neue;
+  font-weight: 300;
+  font-size: 36rpx;
+}
+.innter-input {
+	text-align: right;
+}
+text {
+	color: #333;
+}
+picker {
+	color: #999;
+}
+.clearfix:before, .clearfix:after {
+	content: " ";
+    display: table;
+}
+.clearfix:after {
+	clear: both;
+}

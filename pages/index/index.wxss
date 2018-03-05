@@ -1,0 +1,16 @@
+ .loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column;
+} 
+image {
+	width: 100rpx;
+	height: 100rpx;
+}
+text {
+	padding-top: 150rpx;
+	font-size: 30rpx;
+	color: #e05c57;
+}

@@ -1,0 +1,4 @@
+<view class='loading'>
+	<image src='../../images/loading.gif'></image>
+	<text>让金融触手可及，让信用改变生活</text>
+</view>
