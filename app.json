@@ -5,9 +5,10 @@
         "pages/apply/apply",
         "pages/record/record",
         "pages/login/login",
-		"pages/reg/reg",
-		"pages/forgetPwd/forgetPwd",
-		"pages/agreement/agreement"
+        "pages/reg/reg",
+        "pages/forgetPwd/forgetPwd",
+        "pages/agreement/agreement",
+        "pages/product/list/list"
     ],
     "window":{
         "backgroundTextStyle":"light",

@@ -1,2 +1,24 @@
-<!--pages/forgetPwd/forgetPwd.wxml-->
-<text>pages/forgetPwd/forgetPwd.wxml</text>
+<view class='reg'>
+	<view class='list'>
+		<view>
+			<input type='number' placeholder='请输入手机号' maxlength='11' bindinput='getMobile' />
+			<button class='getCode' bindtap='getCode' disabled='{{ codeDisabled }}'>{{ message }}</button>
+		</view>
+		<view>
+			<input type='number' placeholder='请输入短信验证码' maxlength='6' bindinput='getCheckcode' />
+		</view>
+		<view>
+			<input type='password' placeholder='请输入新密码' maxlength='20' bindinput='getPwd' />
+		</view>
+		<view>
+			<input type='password' placeholder='请再次输入新密码' maxlength='20' bindinput='getPwdAgain' />
+		</view>
+	</view>
+	<view class='tips'>
+		<image src='../../images/svg/warn.svg'></image>
+		<text>密码由6-20位英文字母／数字组成</text>
+	</view>
+	<view>
+		<button bindtap="reg" class='reg'>提交</button>
+	</view>
+</view>

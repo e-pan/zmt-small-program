@@ -1,0 +1,5 @@
+<view class='product-list'>
+	<view class='banner'>
+		<image src='../../../images/pic/explain.png'></image>
+	</view>
+</view>

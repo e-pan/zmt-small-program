@@ -21,16 +21,16 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"plugin": {
 			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -49,6 +49,17 @@
 					"name": "reg",
 					"pathName": "pages/reg/reg",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "find pwd",
+					"pathName": "pages/forgetPwd/forgetPwd",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "product list",
+					"pathName": "pages/product/list/list"
 				}
 			]
 		}

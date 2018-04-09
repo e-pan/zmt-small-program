@@ -64,7 +64,7 @@ Page({
 					if (!res.data.code) {
 						myToast('请输入正确的用户名和密码')
 					} else {
-						wx.redirectTo({url: '/pages/apply/apply'})
+						wx.redirectTo({url: '/pages/product/list/list'})
 					}
 					wx.hideLoading()
 				},
