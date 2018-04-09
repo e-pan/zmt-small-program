@@ -2,7 +2,9 @@
   <ul>
     <li>
       <text>业务部门</text>
-      <text>{{ department }}</text>
+	  <picker bindchange="changeDepartment" value="{{ departmentIndex }}" range="{{ departmentArray }}">
+        {{ departmentArray[departmentIndex] }}
+      </picker>
     </li>
     <li>
       <text>贷款银行</text>

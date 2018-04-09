@@ -10,12 +10,36 @@ App({
 			success: res => {
 				let { code } = res;
 				if(res.code) {
-					wx.request({
-						url: 'https://service.zjzmjr.com/token/getUserInfo.htm',
-						method: 'POST',
-						data: { code },
-						success: res => console.log(res)
-					})
+					console.log("code:          " +code)
+					
+					// wx.request({
+					// 	url: 'http://service.zjzmjr.com/loan/products.htm',
+					// 	method: 'POST',
+					// 	data: {
+					// 		page: 1
+					// 	},
+					// 	success: res => console.log(res)
+					// })
+					// wx.request({
+					// 	url: 'http://service.zjzmjr.com/yztz_user_login_check.htm',
+					// 	method: 'GET',
+					// 	data: {
+					// 		username : code,
+					// 		password : '*****'
+					// 	},
+					// 	success: res => console.log(res)
+					// })
+					// wx.request({
+					// 	url: 'https://api.weixin.qq.com/sns/jscode2session',
+					// 	method: 'GET',
+					// 	data: {
+					// 		appid: 'wx9844c9cdfb60b20b',
+					// 		secret: '5e2a8ad503d865c7c1e52aa09fb17c49',
+					// 		js_code: code,
+					// 		grant_type: 'authorization_code'
+					// 	},
+					// 	success: res => console.log(res)
+					// })
 				}
 			}
 		})

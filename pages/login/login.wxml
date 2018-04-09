@@ -1,0 +1,18 @@
+<view class='login'>
+	<view class='image'>
+		<image src='../../images/login-logo.png'></image>
+	</view>
+	<ul>
+		<li>
+			<text>手机：</text>
+			<input type='number' placeholder='请输入您的手机号' maxlength='11' bindinput='getMobile' />
+		</li>
+		<li>
+			<text>密码：</text>
+			<input type='text' password placeholder='请输入您的密码' bindinput='getPwd' />
+		</li>
+		<li>
+			<button type="warn" disabled="{{disabled}}" bindtap="login" bindtap='submit' > 登录 </button>
+		</li>
+	</ul>
+</view>
