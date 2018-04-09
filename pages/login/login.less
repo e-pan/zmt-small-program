@@ -1,0 +1,65 @@
+@import 'app.less';
+
+page {
+	height: 100%;
+	width: 100%;
+}
+.login {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.logo {
+		width: 180rpx;
+		height: 179rpx;
+		margin-bottom: 50rpx;
+	}
+	ul {
+		margin: 0 5%;
+		width: 90%;
+		padding-bottom: 200rpx;
+	}
+	li {
+		position: relative;
+
+		.icon {
+			width: 30rpx;
+			height: 30rpx;
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: -70rpx;
+			right: -650rpx;
+		}
+	}
+	input {
+		text-align: left;
+		font-size: 26rpx;
+		border: 1px solid @border-color;
+		border-bottom: 0;
+		height: 100rpx;
+		line-height: 100rpx;
+		padding-left: 20rpx;
+	}
+	input.last {
+		border-bottom: 1px solid @border-color;
+	}
+	button {
+		color: #fff;
+		background: @main-color;
+		border: 0;
+		margin-top: 50rpx;
+	}
+	text {
+		color: @main-color;
+		font-size: 30rpx;
+	}
+	.text {
+		padding-top: 50rpx;
+		display: flex;
+		justify-content: space-between;
+	}
+}

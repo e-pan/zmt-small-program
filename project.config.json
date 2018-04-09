@@ -21,6 +21,10 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
@@ -32,6 +36,18 @@
 					"id": -1,
 					"name": "apply",
 					"pathName": "pages/apply/apply",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "agent",
+					"pathName": "pages/agent/agent",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "reg",
+					"pathName": "pages/reg/reg",
 					"query": ""
 				}
 			]

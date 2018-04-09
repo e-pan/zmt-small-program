@@ -1,15 +1,18 @@
 {
-  "pages":[
-    "pages/index/index",
-	"pages/agent/agent",
-	"pages/apply/apply",
-	"pages/record/record",
-	"pages/login/login"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "中茗通",
-    "navigationBarTextStyle":"black"
-  }
+    "pages":[
+        "pages/index/index",
+        "pages/agent/agent",
+        "pages/apply/apply",
+        "pages/record/record",
+        "pages/login/login",
+		"pages/reg/reg",
+		"pages/forgetPwd/forgetPwd",
+		"pages/agreement/agreement"
+    ],
+    "window":{
+        "backgroundTextStyle":"light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "中茗通",
+        "navigationBarTextStyle":"black"
+    }
 }

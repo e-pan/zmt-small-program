@@ -42,8 +42,14 @@ const mobileValidate = mobile => {
 	return global.mobileReg.test(mobile) ? true : false;
 }
 
+// 验证密码
+const pwdValidate = pwd => {
+	return global.pwdReg.test(pwd) ? true : false;
+}
+
 module.exports = {
 	formatTime: formatTime,
 	myToast,
-	mobileValidate
+	mobileValidate,
+	pwdValidate
 }

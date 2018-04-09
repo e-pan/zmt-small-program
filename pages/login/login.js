@@ -8,53 +8,71 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		disabled: true,
 		mobile: '',
-		password: ''
+		password: '',
+		eye: '../../images/svg/eye.svg',
+		inputType: 'password'
 	},
 	getMobile(e) {
-		if (e.detail.value.length == 11) {
-			this.verSubmit()
-			this.setData({
-				mobile: e.detail.value
-			})
-		}
+		this.setData({
+			mobile: e.detail.value
+		})
 	},
 	getPwd(e) {
 		this.setData({
 			password: e.detail.value
 		})
-		this.verSubmit()
 	},
-	verSubmit() {
-		if (mobileValidate(this.data.mobile) && this.data.password) {
+	togglePwd() {
+		if (this.data.inputType == 'password') {
 			this.setData({
-				disabled: false
+				eye: '../../images/svg/eye1.svg',
+				inputType: 'text'
+			})
+		} else {
+			this.setData({
+				eye: '../../images/svg/eye.svg',
+				inputType: 'password'
 			})
 		}
 	},
-	submit() {
-		wx.request({
-			url: 'http://prod.service.zjzmjr.com/yztz_user_login_check.htm',
-			method: 'GET',
-			data: {
-				username : this.data.mobile,
-				password: this.data.password
-			},
-			success: res => {
-				console.log(res)
-				if (res.data.code != 0) {
-					myToast('请输入正确的用户名和密码')
-				} else {
-					wx.redirectTo({
-						url: '/pages/apply/apply',
-					})
-				}
-			},
-			complete: res => {
-
-			}
+	reg() {
+		wx.navigateTo({
+			url: '/pages/reg/reg'
 		})
+	},
+	forgetPwd() {
+		wx.navigateTo({
+			url: '/pages/forgetPwd/forgetPwd'
+		})
+	},
+	submit() {
+		if (!this.data.mobile || !mobileValidate(this.data.mobile)) {
+			myToast('请输入正确的手机号')
+		} else if (!this.data.password) {
+			myToast('请输入密码')
+		} else {
+			wx.showLoading()
+			wx.request({
+				url: app.globalData.API + '/yztz_user_login_check.htm',
+				method: 'GET',
+				data: {
+					username : this.data.mobile,
+					password: this.data.password
+				},
+				success: res => {
+					if (!res.data.code) {
+						myToast('请输入正确的用户名和密码')
+					} else {
+						wx.redirectTo({url: '/pages/apply/apply'})
+					}
+					wx.hideLoading()
+				},
+				complete: res => {
+				}
+			})
+
+		}
 	},
 	/**
 	 * 生命周期函数--监听页面加载

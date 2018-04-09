@@ -1,0 +1,25 @@
+<view class='reg'>
+	<view class='list'>
+		<view>
+			<input type='number' placeholder='请输入手机号' maxlength='11' bindinput='getMobile' />
+			<button class='getCode' bindtap='getCode' disabled='{{ codeDisabled }}'>{{ message }}</button>
+		</view>
+		<view>
+			<input type='number' placeholder='请输入短信验证码' maxlength='6' bindinput='getCheckcode' />
+		</view>
+		<view>
+			<input type='{{ inputType }}' placeholder='请输入登录密码' maxlength='20' bindinput='getPwd' />
+			<image src='{{ eye }}' class='icon' bindtap='togglePwd'></image>
+		</view>
+	</view>
+	<view class='tips'>
+		<image src='../../images/svg/warn.svg'></image>
+		<text>密码由6-20位英文字母／数字组成</text>
+	</view>
+	<view>
+		<button bindtap="reg" class='reg'>注册</button>
+	</view>
+	<view class='agreement'>
+		<p>注册即表示您已同意<text bindtap='agreement'>《注册协议》</text></p>
+	</view>
+</view>
