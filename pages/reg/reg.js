@@ -54,7 +54,7 @@ Page({
 			wx.showLoading()
 			wx.request({
 				url: app.globalData.API + '/merchant/sendMobilecode.htm',
-				method: 'GET',
+				method: 'POST',
 				header: {
                     "content-type": "application/x-www-form-urlencoded"
                 },
