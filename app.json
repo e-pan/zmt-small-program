@@ -8,7 +8,9 @@
         "pages/reg/reg",
         "pages/forgetPwd/forgetPwd",
         "pages/agreement/agreement",
-        "pages/product/list/list"
+        "pages/product/list/list",
+		"pages/product/detail/detail",
+		"pages/product/apply/apply"
     ],
     "window":{
         "backgroundTextStyle":"light",

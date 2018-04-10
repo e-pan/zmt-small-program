@@ -55,7 +55,10 @@ Page({
 			wx.showLoading()
 			wx.request({
 				url: app.globalData.API + '/yztz_user_login_check.htm',
-				method: 'GET',
+				method: 'POST',
+				header: {
+                    "content-type": "application/x-www-form-urlencoded"
+                },
 				data: {
 					username : this.data.mobile,
 					password: this.data.password

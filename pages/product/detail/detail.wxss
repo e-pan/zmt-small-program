@@ -78,71 +78,41 @@ picker {
 .footer .active .service {
   background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
 }
-page {
-  background: #f2f2fc;
-}
-.reg .list {
+.product-detail .item {
+  margin-bottom: 20rpx;
   background: #fff;
-  position: relative;
-  margin-top: 20rpx;
 }
-.reg .list input {
-  padding-left: 20rpx;
+.product-detail .item view {
+  padding: 15rpx 30rpx;
+}
+.product-detail .item view:first-child {
   border-bottom: 1px solid #f2f2fc;
-  height: 100rpx;
-  line-height: 100rpx;
-  font-size: 30rpx;
 }
-.reg .getCode {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  width: 250rpx;
-  height: 100rpx;
-  color: #fff;
-  background: #fb5849;
-  border-radius: 0;
-  font-size: 28rpx;
-  line-height: 100rpx;
-  text-align: center;
-}
-.reg .icon {
-  display: block;
-  position: absolute;
+.product-detail image {
   width: 30rpx;
   height: 30rpx;
-  z-index: 2;
-  bottom: 35rpx;
-  right: 35rpx;
 }
-.reg .tips {
-  padding: 30rpx;
+.product-detail li {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.product-detail li text {
+  display: flex;
+  justify-content: flex-start;
+}
+.product-detail text {
+  padding-left: 10rpx;
+  font-size: 26rpx;
+}
+.product-detail .tit {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.reg .tips image {
-  display: inline-block;
-  width: 30rpx;
-  height: 30rpx;
-}
-.reg .tips text {
-  color: #c4c4cc;
-  font-size: 28rpx;
-  padding-left: 10rpx;
-}
-.reg .reg {
-  color: #fff;
-  margin: 70rpx 30rpx 30rpx 30rpx;
-  background: #13b7f6;
-  border: 0;
-}
-.reg .agreement {
-  margin-left: 30rpx;
-  color: #c4c4cc;
-  font-size: 28rpx;
-  padding-left: 10rpx;
-}
-.reg .agreement text {
-  color: #13b7f6;
+.product-detail .tit text {
+  font-size: 33rpx;
+  color: #333;
+  font-weight: 500;
 }

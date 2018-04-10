@@ -1,0 +1,76 @@
+<view class='product-detail'>
+    <view class='item'>
+        <view class='tit'>
+            <image src='../../../images/pic/car.png'></image>
+            <text>汽车担保贷</text>
+        </view>
+        <view>
+            <text>汽车担保贷是茗发担保公司与银行合作推出的汽车 分期贷款。</text>
+            <text>由茗发担保公司为购车人提供担保，向银行借款购买汽车，之后购车人将汽车抵押给茗发担保公司，直至购车人将汽车贷款还清。汽车抵押期间，汽车使用权属于购车人。</text>
+        </view>
+    </view>
+    <view class='item'>
+        <view>
+            <image src='../../../images/icon/icon-5.png'></image>
+            <text>申请条件</text>
+        </view>
+        <view>
+            <ul>
+                <li><text>适用车辆：新车、二手车、商用车</text></li>
+                <li><text>购车首付：20%起</text></li>
+                <li><text>可贷金额：2~100万</text></li>
+                <li><text>年龄要求：18~60周岁，未婚人士需担保人</text></li>
+            </ul>
+        </view>
+    </view>
+    <view class='item'>
+        <view>
+            <image src='../../../images/icon/icon-5.png'></image>
+            <text>申请材料</text>
+        </view>
+        <view>
+            <ul>
+                <li><text>申请贷款：借款人、配偶、担保人身份证、信用查 询授权书</text></li>
+                <li><text>签署合同：根据车辆和贷款金额，提供不同的材料</text></li>
+            </ul>
+        </view>
+    </view>
+     <view class='item'>
+        <view>
+            <image src='../../../images/icon/icon-5.png'></image>
+            <text>贷款流程</text>
+        </view>
+        <view>
+            <ul>
+                <li>
+                    <image src='../../../images/svg/step0.svg'></image>
+                    <text>申请（提供身份证、信用查询授权书）</text>
+                </li>
+                <li>
+                    <image src='../../../images/svg/step1.svg'></image>
+                    <text>征信查询（工作日仅需20分钟即可获知征信结果）</text>
+                </li>
+                <li>
+                    <image src='../../../images/svg/step2.svg'></image>
+                    <text>客服电访（征信通过后，客服将对借款人进行电访）</text>
+                </li>
+                <li>
+                    <image src='../../../images/svg/step3.svg'></image>
+                    <text>签约并提交材料（客户签署借款合同，并提供贷款要求材料）</text>
+                </li>
+                <li>
+                    <image src='../../../images/svg/step4.svg'></image>
+                    <text>放款（签约后1~3个工作日内放款给汽车销售商）</text>
+                </li>
+                <li>
+                    <image src='../../../images/svg/step5.svg'></image>
+                    <text>车辆抵押（代理人为客户办理车辆抵押程序）</text>
+                </li>
+                <li>
+                    <image src='../../../images/svg/step6.svg'></image>
+                    <text>还款（客户每月按时还款银行）</text>
+                </li>
+            </ul>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,160 @@
+<view class='product-apply'>
+    <view class='item'>
+        <ul>
+            <li>
+                <text>业务部门</text>
+                <picker bindchange="changeDepartment" value="{{ departmentIndex }}" range="{{ departmentArray }}">
+                    {{ departmentArray[departmentIndex] }}
+                </picker>
+            </li>
+            <li>
+                <text>业务员</text>
+                <picker bindchange="changeDepartment" value="{{ departmentIndex }}" range="{{ departmentArray }}">
+                    {{ departmentArray[departmentIndex] }}
+                </picker>
+            </li>
+            <li>
+                <text>贷款银行</text>
+                <picker bindchange="changeDepartment" value="{{ departmentIndex }}" range="{{ departmentArray }}">
+                    {{ departmentArray[departmentIndex] }}
+                </picker>
+            </li>
+        </ul>
+    </view>
+    <view class='explain'>
+        <text>身份证上传声明</text>
+        <image src='../../../images/svg/explain.svg'></image>
+    </view>
+    <view class='item'>
+        <ul>
+            <li>
+                <view class='half-box'>
+                    <text>借款人身份证正面照</text>
+                    <image class='half-img' mode="widthFix" src="{{ userIDcardUp || IDcardUp }}" bindtap='changeImg' data-type='userIDcardUp'></image>
+                </view>
+                <view class='half-box'>
+                    <text>借款人身份证反面照</text>
+                    <image class='half-img' mode="widthFix" src="{{ userIDcardDown || IDcardDown }}" bindtap='changeImg' data-type='userIDcardDown'></image>
+                </view>
+            </li>
+            <li>
+                <text>借款人姓名</text>
+                <input placeholder="请输入借款人姓名..." value='{{ userName }}' class='innter-input' type="text" />
+            </li>
+            <li>
+                <text>借款人身份证号</text>
+                <input placeholder="请输入借款人身份证号..." value='{{ userName }}' class='innter-input' type="idcard" maxlength='18' />
+            </li>
+            <li>
+                <text>借款人手机号</text>
+                <input placeholder="请输入借款人手机号..." value='{{ userName }}' class='innter-input' type="number" maxlength='11' />
+            </li>
+        </ul>
+    </view>
+    <view class='item'>
+        <ul>
+            <li>
+                <text>是否已婚</text>
+                <switch bindchange="changeMarry" />
+            </li>
+            <block wx:if='{{ isMarry }}'>
+                <li>
+                    <view class='half-box'>
+                        <text>配偶身份证正面照</text>
+                        <image class='half-img' mode="widthFix" src="{{ userIDcardUp || IDcardUp }}" bindtap='changeImg' data-type='userIDcardUp'></image>
+                    </view>
+                    <view class='half-box'>
+                        <text>配偶身份证反面照</text>
+                        <image class='half-img' mode="widthFix" src="{{ userIDcardDown || IDcardDown }}" bindtap='changeImg' data-type='userIDcardDown'></image>
+                    </view>
+                </li>
+                <li>
+                    <text>配偶姓名</text>
+                    <input placeholder="请输入配偶姓名..." value='{{ userName }}' class='innter-input' type="text" />
+                </li>
+                <li>
+                    <text>配偶身份证号</text>
+                    <input placeholder="请输入配偶身份证号..." value='{{ userName }}' class='innter-input' type="idcard" maxlength='18' />
+                </li>
+                <li>
+                    <text>配偶手机号</text>
+                    <input placeholder="请输入配偶手机号..." value='{{ userName }}' class='innter-input' type="number" maxlength='11' />
+                </li>
+            </block>
+        </ul>
+    </view>
+    <view class='item'>
+        <ul>
+            <li>
+                <text>是否需要担保人1</text>
+                <switch bindchange="changeMarry" />
+            </li>
+            <block wx:if='{{ isguarantee1 }}'>
+                <li>
+                    <view class='half-box'>
+                        <text>担保人1身份证正面照</text>
+                        <image class='half-img' mode="widthFix" src="{{ userIDcardUp || IDcardUp }}" bindtap='changeImg' data-type='userIDcardUp'></image>
+                    </view>
+                    <view class='half-box'>
+                        <text>担保人1身份证反面照</text>
+                        <image class='half-img' mode="widthFix" src="{{ userIDcardDown || IDcardDown }}" bindtap='changeImg' data-type='userIDcardDown'></image>
+                    </view>
+                </li>
+                <li>
+                    <text>担保人1姓名</text>
+                    <input placeholder="请输入担保人1姓名..." value='{{ userName }}' class='innter-input' type="text" />
+                </li>
+                <li>
+                    <text>担保人1身份证号</text>
+                    <input placeholder="请输入担保人1身份证号..." value='{{ userName }}' class='innter-input' type="idcard" maxlength='18' />
+                </li>
+                <li>
+                    <text>担保人1手机号</text>
+                    <input placeholder="请输入担保人1手机号..." value='{{ userName }}' class='innter-input' type="number" maxlength='11' />
+                </li>
+            </block>
+        </ul>
+    </view>
+    <view class='item'>
+        <ul>
+            <li>
+                <text>是否需要担保人2</text>
+                <switch bindchange="changeMarry" />
+            </li>
+            <block wx:if='{{ isguarantee2 }}'>
+                <li>
+                    <view class='half-box'>
+                        <text>担保人2身份证正面照</text>
+                        <image class='half-img' mode="widthFix" src="{{ userIDcardUp || IDcardUp }}" bindtap='changeImg' data-type='userIDcardUp'></image>
+                    </view>
+                    <view class='half-box'>
+                        <text>担保人2身份证反面照</text>
+                        <image class='half-img' mode="widthFix" src="{{ userIDcardDown || IDcardDown }}" bindtap='changeImg' data-type='userIDcardDown'></image>
+                    </view>
+                </li>
+                <li>
+                    <text>担保人2姓名</text>
+                    <input placeholder="请输入担保人2姓名..." value='{{ userName }}' class='innter-input' type="text" />
+                </li>
+                <li>
+                    <text>担保人2身份证号</text>
+                    <input placeholder="请输入担保人2身份证号..." value='{{ userName }}' class='innter-input' type="idcard" maxlength='18' />
+                </li>
+                <li>
+                    <text>担保人2手机号</text>
+                    <input placeholder="请输入担保人2手机号..." value='{{ userName }}' class='innter-input' type="number" maxlength='11' />
+                </li>
+            </block>
+        </ul>
+    </view>
+    <view class='item authorization'>
+        <text>信用报告查询材料</text>
+        <view class='more-img clearfix'>
+            <view wx:for='{{ authorizationArr }}' wx:for-index="idx">
+                <span bindtap='remove' data-index='{{ idx }}' data-item='{{ item }}'>x</span>
+                <image src='{{ item }}' mode="aspectFit"></image>
+            </view>
+            <view class='add' bindtap='changeImg' data-type='authorization'>+</view>
+        </view>
+    </view>
+</view>

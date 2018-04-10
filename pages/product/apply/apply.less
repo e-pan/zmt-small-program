@@ -1,0 +1,97 @@
+@import 'app.less';
+
+.product-apply {
+    picker, input {
+        font-size: 26rpx;
+    }
+    .item {
+        background: #fff;
+        margin-bottom: 20rpx;
+
+        li {
+            border-bottom: 1px solid @bg-color;
+            padding: 30rpx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .half-box {
+            width: 48%;
+        }
+        .half-img {
+            width: 94%;
+            border: 1px dotted #ddd;
+            border-radius: 5px;
+            padding: 2% 3%;
+            margin-top: 10rpx;
+            height: 200rpx;
+        }
+    }
+    .explain {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20rpx;
+        justify-content: flex-end;
+        padding-right: 30rpx;
+
+        text {
+            padding-left: 30rpx;
+        }
+        image {
+            width: 30rpx;
+            height: 30rpx;
+            padding-left: 10rpx;
+        }
+    }
+    .more-img {
+        width: 100%;
+        margin-top: 20rpx;
+        line-height: auto;
+
+        view {
+            display: block;
+            position: relative;
+            width: 150rpx;
+            height: 150rpx;
+            float: left;
+            margin-right: 20rpx;
+            margin-bottom: 20rpx;
+            border: 1px solid #f3f3f3;
+        }
+        view:nth-child(4n) {
+            margin-right: 0;
+        }
+        image {
+            width: 150rpx;
+            height: 150rpx;
+            position: absolute;
+        }
+        span {
+            position: absolute;
+            z-index: 2;
+            background: #ddd;
+            width: 35rpx;
+            height: 35rpx;
+            line-height: 35rpx;
+            border-radius: 20rpx;
+            text-align: center;
+            color: #fff;
+            top: -17rpx;
+            right: -17rpx;
+            font-size: 25rpx;
+            background: rgba(0, 0, 0, .6);
+        }
+        .add {
+            background: #f3f3f3;
+            color: #bbb;
+            width: 150rpx;
+            font-size: 60rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+    }
+    .authorization {
+        padding: 0 30rpx;
+    }
+}

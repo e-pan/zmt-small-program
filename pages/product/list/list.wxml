@@ -1,5 +1,40 @@
+<import src='../../../templates/common/footer.wxml' />
+
 <view class='product-list'>
-	<view class='banner'>
-		<image src='../../../images/pic/explain.png'></image>
+	<swiper class='banner' indicator-dots="false" autoplay="false" interval="5000" duration="1000">
+		<block wx:for="{{imgUrls}}" wx:key="key">
+			<swiper-item>
+				<image src="{{item}}" class="slide-image" />
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class='tabs'>
+		<view>
+			<image src='../../../images/icon/icon-11.png'></image>
+			<text>我的客户</text>
+		</view>
+		<view>
+			<image src='../../../images/icon/icon-9.png'></image>
+			<text>待办事项</text>
+		</view>
+		<view>
+			<image src='../../../images/icon/icon-10.png'></image>
+			<text>统计</text>
+		</view>
 	</view>
+	<view class='products'>
+		<ul>
+			<li style='background-image: url("http://prod.service.zjzmjr.com/images/test/pic-3.jpg")'>
+				<view class='tit'>
+					<text>汽车担保贷</text>
+					<text>银行合作 安全可靠</text>
+				</view>
+				<view class='con'>
+					<text bindtap='detail'>产品介绍</text>
+					<text bindtap='apply'>立即申请</text>
+				</view>
+			</li>
+		</ul>
+	</view>
+	<template is='footer' data='{{ navs }}' />
 </view>

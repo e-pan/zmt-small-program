@@ -1,0 +1,10 @@
+<template name='footer'>
+	<view class='footer'>
+		<ul>
+            <li wx:for='{{ navs }}' wx:key='key' class='{{ item.active ? "active" : "" }}' data-isActive='{{ item.active }}' data-page='{{ item.page }}' bindtap='onNav'>
+                <i class='icon {{ item.icon }}'></i>
+                <text>{{ item.name }}</text>
+            </li>
+		</ul>
+	</view>
+</template>

@@ -78,71 +78,94 @@ picker {
 .footer .active .service {
   background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
 }
-page {
-  background: #f2f2fc;
+.product-apply picker,
+.product-apply input {
+  font-size: 26rpx;
 }
-.reg .list {
+.product-apply .item {
   background: #fff;
-  position: relative;
-  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
-.reg .list input {
-  padding-left: 20rpx;
+.product-apply .item li {
   border-bottom: 1px solid #f2f2fc;
-  height: 100rpx;
-  line-height: 100rpx;
-  font-size: 30rpx;
-}
-.reg .getCode {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  width: 250rpx;
-  height: 100rpx;
-  color: #fff;
-  background: #fb5849;
-  border-radius: 0;
-  font-size: 28rpx;
-  line-height: 100rpx;
-  text-align: center;
-}
-.reg .icon {
-  display: block;
-  position: absolute;
-  width: 30rpx;
-  height: 30rpx;
-  z-index: 2;
-  bottom: 35rpx;
-  right: 35rpx;
-}
-.reg .tips {
   padding: 30rpx;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.reg .tips image {
-  display: inline-block;
+.product-apply .item .half-box {
+  width: 48%;
+}
+.product-apply .item .half-img {
+  width: 94%;
+  border: 1px dotted #ddd;
+  border-radius: 5px;
+  padding: 2% 3%;
+  margin-top: 10rpx;
+  height: 200rpx;
+}
+.product-apply .explain {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+}
+.product-apply .explain text {
+  padding-left: 30rpx;
+}
+.product-apply .explain image {
   width: 30rpx;
   height: 30rpx;
-}
-.reg .tips text {
-  color: #c4c4cc;
-  font-size: 28rpx;
   padding-left: 10rpx;
 }
-.reg .reg {
+.product-apply .more-img {
+  width: 100%;
+  margin-top: 20rpx;
+  line-height: auto;
+}
+.product-apply .more-img view {
+  display: block;
+  position: relative;
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border: 1px solid #f3f3f3;
+}
+.product-apply .more-img view:nth-child(4n) {
+  margin-right: 0;
+}
+.product-apply .more-img image {
+  width: 150rpx;
+  height: 150rpx;
+  position: absolute;
+}
+.product-apply .more-img span {
+  position: absolute;
+  z-index: 2;
+  background: #ddd;
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  border-radius: 20rpx;
+  text-align: center;
   color: #fff;
-  margin: 70rpx 30rpx 30rpx 30rpx;
-  background: #13b7f6;
-  border: 0;
+  top: -17rpx;
+  right: -17rpx;
+  font-size: 25rpx;
+  background: rgba(0, 0, 0, 0.6);
 }
-.reg .agreement {
-  margin-left: 30rpx;
-  color: #c4c4cc;
-  font-size: 28rpx;
-  padding-left: 10rpx;
+.product-apply .more-img .add {
+  background: #f3f3f3;
+  color: #bbb;
+  width: 150rpx;
+  font-size: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.reg .agreement text {
-  color: #13b7f6;
+.product-apply .authorization {
+  padding: 0 30rpx;
 }

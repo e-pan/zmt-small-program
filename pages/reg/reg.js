@@ -55,6 +55,9 @@ Page({
 			wx.request({
 				url: app.globalData.API + '/merchant/sendMobilecode.htm',
 				method: 'GET',
+				header: {
+                    "content-type": "application/x-www-form-urlencoded"
+                },
 				data: {
 					mobile : this.data.mobile,
 					type: 2
@@ -105,6 +108,9 @@ Page({
 			wx.request({
 				url: app.globalData.API + '/merchant/registerMerchantUser.htm',
 				method: 'POST',
+				header: {
+                    "content-type": "application/x-www-form-urlencoded"
+                },
 				data: {
 					mobile : this.data.mobile,
 					checkcode: this.data.checkcode,

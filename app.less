@@ -1,28 +1,34 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-}
 
+// .container {
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 200rpx 0;
+//   box-sizing: border-box;
+// }
+
+/** minxin **/
+@main-color: #13b7f6;
+@border-color: #c4c4cc;
+@bg-color: #f2f2fc;
+@assist-color: #fb5849;
+@gray-color: #c4c4cc;
+
+/** rest **/
 page {
-  font-family: helvetica neue;
-  font-weight: 300;
-  font-size: 36rpx;
-}
-.innter-input {
-  text-align: right;
+    background: @bg-color;
 }
 text {
   color: #333;
+  font-size: 30rpx;
 }
 picker {
   color: #999;
 }
+
+/** conmmon **/
 .clearfix:before, .clearfix:after {
   content: " ";
     display: table;
@@ -30,8 +36,66 @@ picker {
 .clearfix:after {
   clear: both;
 }
-@main-color: #13b7f6;
-@border-color: #c4c4cc;
-@bg-color: #f2f2fc;
-@assist-color: #fb5849;
-@gray-color: #c4c4cc;
+.innter-input {
+  text-align: right;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    ul {
+        display: flex;
+        width: 100%;
+        background: #fff;
+        justify-content: space-around;
+        padding: 15rpx 0;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    text {
+        font-size: 26rpx;
+        padding-top: 5rpx;
+        color: @gray-color;
+    }
+    .icon {
+        display: block;
+        width: 40rpx;
+        height: 40rpx;
+        background-size: cover;
+    }
+    .home {
+        background-image: url('http://prod.service.zjzmjr.com/images/svg/loan.svg');
+    }
+    .order {
+        background-image: url('http://prod.service.zjzmjr.com/images/svg/order.svg');
+    }
+    .message {
+        background-image: url('http://prod.service.zjzmjr.com/images/svg/msg.svg');
+    }
+    .service {
+        background-image: url('http://prod.service.zjzmjr.com/images/svg/user.svg');
+    }
+    .active {
+        text {
+            color: @main-color;
+        }
+        .home {
+            background-image: url('http://prod.service.zjzmjr.com/images/svg/loan-h.svg');
+        }
+        .order {
+            background-image: url('http://prod.service.zjzmjr.com/images/svg/order-h.svg');
+        }
+        .message {
+            background-image: url('http://prod.service.zjzmjr.com/images/svg/msg-h.svg');
+        }
+        .service {
+            background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
+        }
+    }
+}

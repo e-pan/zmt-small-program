@@ -27,6 +27,9 @@ Page({
 		wx.request({
 			url: 'https://prod.service.zjzmjr.com/area/userDepartment.htm',
 			method: 'POST',
+			header: {
+                "content-type": "application/x-www-form-urlencoded"
+            },
 			data: {},
 			success: res => {
 				console.log(res)
@@ -36,6 +39,9 @@ Page({
 		wx.request({
 			url: 'https://prod.service.zjzmjr.com/bank/user/creditBankList.htm',
 			method: 'POST',
+			header: {
+                "content-type": "application/x-www-form-urlencoded"
+            },
 			data: {},
 			success: res => {
 				//console.log(res)
@@ -144,7 +150,7 @@ Page({
 					arrs.baoremove(index);
 					console.log(that.data.authorizationArr)
 					that.data.authorizationArr.baoremove(index);
-					
+
 					that.setData({
 						authorizationArr: arrs
 					})
