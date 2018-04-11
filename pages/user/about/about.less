@@ -1,0 +1,34 @@
+@import 'app.less';
+
+.about {
+	image {
+		width: 30rpx;
+		height: 30rpx;
+	}
+	li {
+		display: flex;
+		padding:  30rpx;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid @bg-color;
+		background: #fff;
+	}
+	.info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 50rpx;
+
+		image {
+			width: 200rpx;
+			height: 200rpx;
+			margin: 40rpx 0;
+		}
+		text {
+			margin: 10rpx 0;
+		}
+	}
+	.phone {
+		color: @main-color;
+	}
+}

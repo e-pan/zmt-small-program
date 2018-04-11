@@ -9,11 +9,11 @@
 			<image src='{{ eye }}' class='icon' bindtap='togglePwd'></image>
 		</li>
 		<li>
-			<button bindtap='submit'>登录</button>
+			<button bindtap='submit' class='submit-btn '>登录</button>
 		</li>
 		<li class='text'>
-			<text bindtap='reg'>注册账号</text>
-			<text bindtap='forgetPwd'>忘记密码</text>
+			<text bindtap='onReg'>注册账号</text>
+			<text bindtap='onFindPwd'>忘记密码</text>
 		</li>
 	</ul>
 </view>

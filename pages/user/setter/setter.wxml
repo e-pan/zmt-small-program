@@ -5,16 +5,27 @@
 			<text>qwe</text>
 			<text>188888888888</text>
 		</view>
-		
+
 	</view>
 	<view class='item'>
 		<ul>
+			<li>
+				<text>实名认证</text>
+				<view class='certify'>
+					<image src='../../../images/svg/my-2.svg'></image>
+					<text>已实名</text>
+				</view>
+			</li>
 			<li bindtap='onCertify'>
 				<text>实名认证</text>
 				<image src='../../../images/svg/next.svg'></image>
 			</li>
-			<li bindtap='onModifyLoginPwd'>
+			<li bindtap='onLoginPwd'>
 				<text>修改登录密码</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+			<li bindtap='onSetPayPwd'>
+				<text>设置交易密码</text>
 				<image src='../../../images/svg/next.svg'></image>
 			</li>
 			<li bindtap='onModifyPayPwd'>

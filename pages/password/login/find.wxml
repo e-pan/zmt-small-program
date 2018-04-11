@@ -15,7 +15,7 @@
 		</view>
 	</view>
 	<view class='tips'>
-		<image src='../../images/svg/warn.svg'></image>
+		<image src='../../../images/svg/warn.svg'></image>
 		<text>密码由6-20位英文字母／数字组成</text>
 	</view>
 	<view>

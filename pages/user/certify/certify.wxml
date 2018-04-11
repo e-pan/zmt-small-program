@@ -1,0 +1,20 @@
+<view class='user-info'>
+	<view class='item'>
+		<ul>
+			<li>
+				<text>您的真实姓名</text>
+				<input placeholder="请输入您的真实姓名..." class='innter-input' type="text" bindinput='getName' />
+			</li>
+			<li>
+				<text>您的身份证号</text>
+				<input placeholder="请输入您的身份证号..." class='innter-input' type="idcard" bindinput='getIDcard' maxlength='18' />
+			</li>
+		</ul>
+	</view>
+	<view class='tips'>
+		<text>*请绑定您本人的身份信息，提交后不可修改</text>
+	</view>
+	<view class='item' bindtap='onSubmit'>
+		<button class='submit-btn'>提交</button>
+	</view>
+</view>

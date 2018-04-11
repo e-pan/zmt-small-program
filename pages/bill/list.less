@@ -1,0 +1,42 @@
+@import 'app.less';
+
+page {
+	background: @bg-color;
+}
+.bill {
+	li {
+		border-bottom: 1px solid @bg-color;
+		background: #fff;
+		padding: 30rpx;
+		display: flex;
+		flex-direction: column;
+	}
+	.first, .second {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.second {
+		padding-top: 10rpx;
+		text {
+			font-size: 26rpx;
+		}
+	}
+	.status {}
+	.source {
+		color: #999;
+		font-size: 24rpx;
+		padding-left: 10rpx;
+	}
+	.money {
+
+	}
+	.time {
+		font-size: 24rpx;
+		color: #999;
+	}
+	.balance {
+		color: @main-color;
+		font-size: 24rpx;
+	}
+}

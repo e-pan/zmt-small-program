@@ -1,0 +1,19 @@
+<view class='about'>
+	<view class='info'>
+		<image src='../../../images/pic/logo.png'></image>
+		<text>中茗通 V1.0.0</text>
+		<text>让金融唾手可得，让信用改变生活</text>
+	</view>
+	<view class='list'>
+		<ul>
+			<li bindtap='onAgreement'>
+				<text>中茗通金融注册协议</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+			<li bindtap='phoneCall'>
+				<text>客服电话</text>
+				<text class='phone'>{{ phoneNum }}</text>
+			</li>
+		</ul>
+	</view>
+</view>

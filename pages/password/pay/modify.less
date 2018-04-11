@@ -1,0 +1,78 @@
+@import 'app.less';
+
+page {
+	background: @bg-color;
+}
+.reg {
+	.list {
+		background: #fff;
+		position: relative;
+		margin-top: 20rpx;
+
+		input {
+			padding-left: 20rpx;
+			border-bottom: 1px solid @bg-color;
+			height: 100rpx;
+			line-height: 100rpx;
+			font-size: 30rpx;
+		}
+	}
+	.position {
+		position: relative;
+	}
+	.getCode {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		right: 0;
+		width: 250rpx;
+		height: 100rpx;
+		color: #fff;
+		background: @assist-color;
+		border-radius: 0;
+		font-size: 28rpx;
+		line-height: 100rpx;
+		text-align: center;
+	}
+	.icon {
+		display: block;
+		position: absolute;
+		width: 30rpx;
+		height: 30rpx;
+		z-index: 2;
+		bottom: 35rpx;
+		right: 35rpx;
+	}
+	.tips {
+		padding: 30rpx;
+		display: flex;
+		align-items: center;
+
+		image {
+			display: inline-block;
+			width: 30rpx;
+			height: 30rpx;
+		}
+		text {
+			color: @gray-color;
+			font-size: 28rpx;
+			padding-left: 10rpx;
+		}
+	}
+	.reg {
+		color: #fff;
+		margin: 70rpx 30rpx 30rpx 30rpx;
+		background: @main-color;
+		border: 0;
+	}
+	.agreement {
+		margin-left: 30rpx;
+		color: @gray-color;
+		font-size: 28rpx;
+		padding-left: 10rpx;
+
+		text {
+			color: @main-color;
+		}
+	}
+}

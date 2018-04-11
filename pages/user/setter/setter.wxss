@@ -21,6 +21,13 @@ picker {
 }
 .innter-input {
   text-align: right;
+  font-size: 26rpx;
+}
+.submit-btn {
+  color: #fff;
+  background: #13b7f6;
+  border: 0;
+  margin: 50rpx 30rpx;
 }
 .footer {
   position: fixed;
@@ -120,4 +127,13 @@ picker {
 }
 .user-info .login-out text {
   color: #fb5849;
+}
+.user-info .certify {
+  display: flex;
+  align-items: center;
+}
+.user-info .certify text {
+  color: #79cf13;
+  font-size: 28rpx;
+  padding-left: 5rpx;
 }

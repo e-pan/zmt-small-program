@@ -1,9 +1,0 @@
-<!--pages/agent/agent.wxml-->
-<view>
-	<view>
-		<button bindtap='apply'>代理申请</button>
-	</view>
-	<view>
-		<button bindtap='record'>代理记录</button>
-	</view>
-</view>

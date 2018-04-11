@@ -86,57 +86,73 @@ picker {
   background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
 }
 page {
-  height: 100%;
-  width: 100%;
+  background: #f2f2fc;
 }
-.login {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.login .logo {
-  width: 180rpx;
-  height: 179rpx;
-  margin-bottom: 50rpx;
-}
-.login ul {
-  margin: 0 5%;
-  width: 90%;
-  padding-bottom: 200rpx;
-}
-.login li {
+.reg .list {
+  background: #fff;
   position: relative;
+  margin-top: 20rpx;
 }
-.login li .icon {
-  width: 30rpx;
-  height: 30rpx;
-  display: block;
-  position: absolute;
-  z-index: 2;
-  top: -70rpx;
-  right: -650rpx;
-}
-.login input {
-  text-align: left;
-  font-size: 26rpx;
-  border: 1px solid #c4c4cc;
-  border-bottom: 0;
+.reg .list input {
+  padding-left: 20rpx;
+  border-bottom: 1px solid #f2f2fc;
   height: 100rpx;
   line-height: 100rpx;
-  padding-left: 20rpx;
-}
-.login input.last {
-  border-bottom: 1px solid #c4c4cc;
-}
-.login text {
-  color: #13b7f6;
   font-size: 30rpx;
 }
-.login .text {
-  padding-top: 50rpx;
+.reg .position {
+  position: relative;
+}
+.reg .getCode {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 250rpx;
+  height: 100rpx;
+  color: #fff;
+  background: #fb5849;
+  border-radius: 0;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.reg .icon {
+  display: block;
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  z-index: 2;
+  bottom: 35rpx;
+  right: 35rpx;
+}
+.reg .tips {
+  padding: 30rpx;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+.reg .tips image {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+}
+.reg .tips text {
+  color: #c4c4cc;
+  font-size: 28rpx;
+  padding-left: 10rpx;
+}
+.reg .reg {
+  color: #fff;
+  margin: 70rpx 30rpx 30rpx 30rpx;
+  background: #13b7f6;
+  border: 0;
+}
+.reg .agreement {
+  margin-left: 30rpx;
+  color: #c4c4cc;
+  font-size: 28rpx;
+  padding-left: 10rpx;
+}
+.reg .agreement text {
+  color: #13b7f6;
 }

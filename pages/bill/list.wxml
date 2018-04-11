@@ -1,0 +1,25 @@
+<view class='bill'>
+	<text bindtap='filter'>筛选</text>
+	<ul>
+		<li>
+			<view class='first'>
+				<text class='status'>充值<text class='source'>银行代收</text></text>
+				<text class='money'>+123</text>
+			</view>
+			<view class='second'>
+				<text class='time'>2016/07/06 15:49</text>
+				<text class='balance'>余额：7966</text>
+			</view>
+		</li>
+		<li>
+			<view class='first'>
+				<text class='status'>充值<text class='source'>银行代收</text></text>
+				<text class='money'>+123</text>
+			</view>
+			<view class='second'>
+				<text class='time'>2016/07/06 15:49</text>
+				<text class='balance'>余额：7966</text>
+			</view>
+		</li>
+	</ul>
+</view>
