@@ -22,19 +22,19 @@ Page({
                 name: '订单',
                 icon: 'order',
                 active: false,
-                page: '/pages/order/order/'
+                page: '/pages/order/order'
             },
             {
                 name: '消息',
                 icon: 'message',
                 active: false,
-                page: '/pages/message/message/'
+                page: '/pages/message/message'
             },
             {
                 name: '服务',
                 icon: 'service',
                 active: false,
-                page: '/pages/servie/servie/'
+                page: '/pages/user/info/info'
             }
         ]
     },

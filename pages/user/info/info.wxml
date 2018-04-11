@@ -1,0 +1,30 @@
+<view class='user-info'>
+	<view class='item userInfo' bindtap='onSetter'>
+		<image src='{{ avatar }}' class='avatar'></image>
+		<view>
+			<text>qwe</text>
+			<text>188888888888</text>
+		</view>
+		<image src='../../../images/svg/next.svg'></image>
+	</view>
+	<view class='item'>
+		<ul>
+			<li bindtap='onBill'>
+				<text>账单</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+			<li bindtap='onBank'>
+				<text>银行卡</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+		</ul>
+	</view>
+	<view class='item'>
+		<ul>
+			<li bindtap='onGuidance'>
+				<text>操作指导</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+		</ul>
+	</view>
+</view>

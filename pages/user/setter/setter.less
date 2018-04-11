@@ -1,0 +1,48 @@
+@import 'app.less';
+
+.user-info {
+	image {
+		width: 30rpx;
+		height: 30rpx;
+	}
+	image.avatar {
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50rpx;
+	}
+	.item {
+		background: #fff;
+		margin-bottom: 20rpx;
+	}
+	.userInfo {
+		display: flex;
+		justify-content: space-between;
+		padding: 30rpx;
+		align-items: center;
+
+		view {
+			display: flex;
+			flex-direction: column;
+			flex: 3;
+			padding-left: 20rpx;
+		}
+		text {
+			font-size: 32rpx;
+			padding: 5rpx 0;
+		}
+	}
+	li {
+		display: flex;
+		padding:  30rpx;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid @bg-color;
+	}
+	.login-out {
+		text-align: center;
+		padding: 30rpx;
+		text {
+			color: @assist-color;
+		}
+	}
+}

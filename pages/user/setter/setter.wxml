@@ -1,0 +1,33 @@
+<view class='user-info'>
+	<view class='item userInfo'>
+		<image src='{{ avatar }}' class='avatar'></image>
+		<view>
+			<text>qwe</text>
+			<text>188888888888</text>
+		</view>
+		
+	</view>
+	<view class='item'>
+		<ul>
+			<li bindtap='onCertify'>
+				<text>实名认证</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+			<li bindtap='onModifyLoginPwd'>
+				<text>修改登录密码</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+			<li bindtap='onModifyPayPwd'>
+				<text>修改交易密码</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+			<li bindtap='onAbout'>
+				<text>关于中茗通</text>
+				<image src='../../../images/svg/next.svg'></image>
+			</li>
+		</ul>
+	</view>
+	<view class='item login-out' bindtap='loginOut'>
+		<text>退出当前账户</text>
+	</view>
+</view>

@@ -10,7 +10,9 @@
         "pages/agreement/agreement",
         "pages/product/list/list",
 		"pages/product/detail/detail",
-		"pages/product/apply/apply"
+		"pages/product/apply/apply",
+        "pages/user/info/info",
+        "pages/user/setter/setter"
     ],
     "window":{
         "backgroundTextStyle":"light",

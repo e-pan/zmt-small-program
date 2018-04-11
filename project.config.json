@@ -21,16 +21,16 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 3,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -72,6 +72,18 @@
 					"id": -1,
 					"name": "product apply",
 					"pathName": "pages/product/apply/apply",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "service",
+					"pathName": "pages/user/info/info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "setter",
+					"pathName": "pages/user/setter/setter",
 					"query": ""
 				}
 			]
