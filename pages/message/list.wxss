@@ -1,0 +1,108 @@
+/** minxin **/
+/** rest **/
+page {
+  background: #f2f2fc;
+}
+text {
+  color: #333;
+  font-size: 30rpx;
+}
+picker {
+  color: #999;
+}
+/** conmmon **/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.innter-input {
+  text-align: right;
+  font-size: 26rpx;
+}
+.submit-btn {
+  color: #fff;
+  background: #13b7f6;
+  border: 0;
+  margin: 50rpx 30rpx;
+}
+.hot {
+  color: #fb5849 !important;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer ul {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  justify-content: space-around;
+  padding: 15rpx 0;
+}
+.footer li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer text {
+  font-size: 26rpx;
+  padding-top: 5rpx;
+  color: #c4c4cc;
+}
+.footer .icon {
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  background-size: cover;
+}
+.footer .home {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/loan.svg');
+}
+.footer .order {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/order.svg');
+}
+.footer .message {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/msg.svg');
+}
+.footer .service {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/user.svg');
+}
+.footer .active text {
+  color: #13b7f6;
+}
+.footer .active .home {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/loan-h.svg');
+}
+.footer .active .order {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/order-h.svg');
+}
+.footer .active .message {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/msg-h.svg');
+}
+.footer .active .service {
+  background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
+}
+page {
+  background: #f2f2fc;
+}
+.bank .tips {
+  padding: 20rpx 30rpx 0 30rpx;
+}
+.bank .tips text {
+  font-size: 26rpx;
+  color: #c4c4cc;
+}
+.bank li {
+  background: #fff;
+  border-bottom: 1px solid #f2f2fc;
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
