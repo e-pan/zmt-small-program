@@ -1,5 +1,7 @@
 <view class='bill'>
-	<text bindtap='filter'>筛选</text>
+	<picker mode='selector' bindchange="changeType" value="{{ typeIndex }}" range="{{ typeArrs }}" range-key='{{ "value" }}'>
+		点击<text>{{ typeArrs[typeIndex].value }}</text>筛选
+    </picker>
 	<ul>
 		<li>
 			<view class='first'>

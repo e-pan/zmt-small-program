@@ -1,0 +1,13 @@
+<view class='bank'>
+	<view class='tips'>
+		<text><text class='hot'>*</text>银行卡绑定后，可用于还贷或代理还款，不能转账</text>
+	</view>
+	<view class='card' bindtap='onEdit'>
+		<text>中国工商银行<text class='name'>庆春支行</text></text>
+		<text>6228*************0018</text>
+	</view>
+	<view class='add-card' bindtap='onAdd'>
+		<image src='../../images/pic/add.png'></image>
+		<text>添加银行卡</text>
+	</view>
+</view>

@@ -1,0 +1,48 @@
+@import 'app.less';
+
+page {
+	background: @bg-color;
+}
+
+.bank {
+	.tips {
+		padding: 20rpx 30rpx 0 30rpx;
+
+		text {
+			font-size: 26rpx;
+			color: @gray-color;
+		}
+	}
+	.card {
+		background: #fff;
+		margin: 20rpx 30rpx;
+		display: flex;
+		padding: 20rpx;
+		flex-direction: column;
+		border-left: 2px solid @main-color;
+
+		text {
+			padding: 10rpx 0;
+		}
+		.name {
+			color: @gray-color;
+			font-size: 26rpx;
+			padding-left: 15rpx;
+		}
+	}
+	.add-card {
+		background: #fff;
+		margin: 20rpx 30rpx;
+		display: flex;
+		padding: 40rpx 0;
+		justify-content: center;
+		align-items: center;
+		border-left: 2px solid @main-color;
+
+		image {
+			width: 50rpx;
+			height: 50rpx;
+			margin-right: 20rpx;
+		}
+	}
+}

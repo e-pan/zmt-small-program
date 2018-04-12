@@ -6,7 +6,7 @@ const app = getApp()
 Page({
     data: {
         lists: [],
-        types: [{
+        typeArrs: [{
             value: '全部',
             key: 0
         }, {
@@ -37,31 +37,37 @@ Page({
             value: '商品购买退款',
             key: 9
         }],
-        key: ''
+        typeIndex: 0
+    },
+    // 筛选
+    changeType(e) {
+        this.setData({
+            typeIndex: e.detail.value
+        })
+        this.getBill()
+    },
+    // 获取账单
+    getBill() {
+        wx.showLoading()
+        wx.request({
+            url: app.globalData.API + '/account/getAccountBalanceType.htm',
+            method: 'POST',
+            header: {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            data: {
+                type: this.data.key
+            },
+            success: res => {
+                const datas = res.data
+                console.log(datas)
+            },
+            complete: res => {
+                wx.hideLoading()
+            }
+        })
     },
     onLoad: function(options) {
-        console.log(this)
-        // 获取账单
-        function getBill() {
-            wx.showLoading()
-            wx.request({
-                url: app.globalData.API + '/account/getAccountBalanceType.htm',
-                method: 'POST',
-                header: {
-                    "content-type": "application/x-www-form-urlencoded"
-                },
-                data: {
-                    type: this.data.key
-                },
-                success: res => {
-                    const datas = res.data
-                    console.log(datas)
-                },
-                complete: res => {
-                    wx.hideLoading()
-                }
-            })
-        }
-        getBill()
+        this.getBill()
     }
 })

@@ -29,6 +29,9 @@ picker {
   border: 0;
   margin: 50rpx 30rpx;
 }
+.hot {
+  color: #fb5849 !important;
+}
 .footer {
   position: fixed;
   bottom: 0;
@@ -119,4 +122,17 @@ page {
 .bill .balance {
   color: #13b7f6;
   font-size: 24rpx;
+}
+.bill picker {
+  background: #fff;
+  border-bottom: 1px solid #f2f2fc;
+  border-top: 1px solid #f2f2fc;
+  font-size: 26rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+.bill picker text {
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  padding: 19rpx 30rpx;
 }

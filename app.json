@@ -5,6 +5,8 @@
 		"pages/index/index",
         "pages/agreement/agreement",
         "pages/bill/list",
+        "pages/bank/bank",
+        "pages/bank/info",
         "pages/password/login/find",
         "pages/password/pay/set",
         "pages/password/pay/modify",

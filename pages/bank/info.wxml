@@ -1,0 +1,20 @@
+<form bindsubmit="formSubmit">
+	<view class='bank'>
+		<view class='tips'>
+			<text><text class='hot'>*</text>请绑定您本人的银行卡</text>
+		</view>
+		<ul>
+			<li>
+				<text>持卡人姓名</text>
+				<input name='name' type='text' placeholder='请输入持卡人姓名...' inputtap='getName' class='innter-input' />
+			</li>
+			<li>
+				<text>银行卡号</text>
+				<input name='bandCard' type='number' placeholder='请输入银行卡号...' inputtap='getBandCadr' class='innter-input' />
+			</li>
+		</ul>
+		<view>
+			<button class='submit-btn' formType="submit">下一步</button>
+		</view>
+	</view>
+</form>

@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 11,
 			"list": [
 				{
 					"id": 0,
@@ -97,6 +97,11 @@
 					"name": "账单",
 					"pathName": "pages/bill/list",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "银行卡",
+					"pathName": "pages/bank/bank"
 				}
 			]
 		}
