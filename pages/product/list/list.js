@@ -1,4 +1,3 @@
-// pages/product/list/list.js
 Page({
 
     /**
