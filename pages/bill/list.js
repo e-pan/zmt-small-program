@@ -64,10 +64,25 @@ Page({
                 },
                 callback: data => {
                     if (data.success) {
+                        // 为transactionType匹配中文，类似vue的filters，每一条数据添加一个typeName在页面显示
+                        for (let i = 0; i < data.data.length; i++) {
+                            for (let j = 0; j < that.data.typeArrs.length; j++) {
+                                console.log(that.data.typeArrs[i].key)
+                                if (data.data[i].transactionType == that.data.typeArrs[j].key) {
+                                    data.data[i].typeName = that.data.typeArrs[j].value
+                                    break;
+                                }
+                            }
+                        }
                         that.setData({
                             bills: data.data
                         })
                     } else {
+                        if (data.code == 'record_not_exsist') {
+                            that.setData({
+                                bills: []
+                            })
+                        }
                         myToast(data.resultMsg)
                     }
                 }

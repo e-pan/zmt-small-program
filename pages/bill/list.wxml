@@ -5,7 +5,7 @@
 	<ul>
 		<li wx:for='{{ bills }}' wx:key='key'>
 			<view class='first'>
-				<text class='status'>{{ typeText }}<text class='source' wx:if='{{ item.rewardSource }}'>{{ item.rewardSource }}</text></text>
+				<text class='status'>{{ item.typeName }}<text class='source' wx:if='{{ item.rewardSource }}'>{{ item.rewardSource }}</text></text>
 				<text class='money'><block wx:if='{{ item.transactionAmount > 0 }}'>+</block>{{ item.transactionAmount }}</text>
 			</view>
 			<view class='second'>
