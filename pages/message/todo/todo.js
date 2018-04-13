@@ -1,51 +1,36 @@
-import { myToast } from '../../utils/util'
+import {
+    myToast
+} from '../../../utils/util'
 
 const app = getApp()
 Page({
     data: {
-        navs: [
-            {
-                name: '首页',
-                icon: 'home',
-                active: false,
-                page: '/pages/product/list/list'
-            },
-            {
-                name: '订单',
-                icon: 'order',
-                active: false,
-                page: '/pages/order/order'
-            },
-            {
-                name: '消息',
-                icon: 'message',
-                active: true,
-                page: '/pages/message/message'
-            },
-            {
-                name: '服务',
-                icon: 'service',
-                active: false,
-                page: '/pages/user/info/info'
-            }
+        status: 1,
+        lists: [
+            1, 2, 3,1, 2, 3,1, 2, 31, 2, 31, 2, 3
         ]
     },
-    onTodo() {
-        wx.navigateTo({
-            url: 'pages/message/todo/list'
+    onList(e) {
+        this.setData({
+            status: e.currentTarget.dataset.status
         })
+        this.getList(e.currentTarget.dataset.status)
     },
-    onNotice() {
-        wx.navigateTo({
-            url: 'pages/message/notice/list'
+    getList: id => {
+        console.log(id)
+    },
+    //下拉刷新
+    onPullDownRefresh: () => {
+        wx.showNavigationBarLoading()
+        wx.showLoading({
+            title: '加载中...'
         })
-    },
-    onSystem() {
-        wx.navigateTo({
-            url: 'pages/message/system/list'
-        })
-    },
-    onLoad: options => {
-        
+        //模拟加载
+        setTimeout(function(){
+            // complete
+            wx.hideNavigationBarLoading() //完成停止加载
+            wx.stopPullDownRefresh() //停止下拉刷新
+            wx.hideLoading()
+        },1500);
     }
 })

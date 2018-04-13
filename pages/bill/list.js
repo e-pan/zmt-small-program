@@ -1,11 +1,11 @@
 import {
-    myToast
+    myToast,
+    ajax
 } from '../../utils/util'
 
 const app = getApp()
 Page({
     data: {
-        lists: [],
         typeArrs: [{
             value: '全部',
             key: 0
@@ -37,35 +37,42 @@ Page({
             value: '商品购买退款',
             key: 9
         }],
-        typeIndex: 0
+        bills: [],
+        typeIndex: '',
+        typeText: '全部'
     },
     // 筛选
     changeType(e) {
+        const that = this
         this.setData({
-            typeIndex: e.detail.value
+            typeIndex: e.detail.value,
+            typeText: that.data.typeArrs[e.detail.value].value
         })
         this.getBill()
     },
     // 获取账单
     getBill() {
-        wx.showLoading()
-        wx.request({
-            url: app.globalData.API + '/account/getAccountBalanceType.htm',
-            method: 'POST',
-            header: {
-                "content-type": "application/x-www-form-urlencoded"
-            },
-            data: {
-                type: this.data.key
-            },
-            success: res => {
-                const datas = res.data
-                console.log(datas)
-            },
-            complete: res => {
-                wx.hideLoading()
-            }
-        })
+        const that = this
+        let sessionId = wx.getStorageSync('sessionId')
+        if (sessionId) {
+            ajax({
+                url: '/account/getAccountBalanceType.htm',
+                method: 'POST',
+                sessionId: sessionId,
+                param: {
+                    type: that.data.typeIndex
+                },
+                callback: data => {
+                    if (data.success) {
+                        that.setData({
+                            bills: data.data
+                        })
+                    } else {
+                        myToast(data.resultMsg)
+                    }
+                }
+            })
+        }
     },
     onLoad: function(options) {
         this.getBill()

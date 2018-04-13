@@ -1,10 +1,10 @@
-<import src='../../templates/common/footer.wxml' />
+<import src='../../../templates/common/footer.wxml' />
 <view class='message'>
 	<view class='item' bindtap='onTodo'>
 		<ul>
 			<li>
 				<view class='icon'>
-					<image src='../../images/svg/msg1.svg'></image>
+					<image src='../../../images/svg/msg1.svg'></image>
 					<text class='num'>22</text>
 				</view>
 				<view >
@@ -19,7 +19,7 @@
 			</li>
 			<li>
 				<view class='icon'>
-					<image src='../../images/svg/msg2.svg'></image>
+					<image src='../../../images/svg/msg2.svg'></image>
 					<text class='num'>2</text>
 				</view>
 				<view>
@@ -38,7 +38,7 @@
 		<ul>
 			<li>
 				<view class='icon'>
-					<image src='../../images/svg/msg3.svg'></image>
+					<image src='../../../images/svg/msg3.svg'></image>
 					<text class='num'>2</text>
 				</view>
 				<view>

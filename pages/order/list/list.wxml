@@ -1,0 +1,8 @@
+<import src='../../../templates/common/footer.wxml' />
+
+<view class='order'>
+    <view class='search'>
+
+    </view>
+	<template is='footer' data='{{ navs }}' />
+</view>

@@ -91,64 +91,59 @@ picker {
 page {
   background: #f2f2fc;
 }
-.todo .tab {
-  background: #fff;
-  height: 100rpx;
-  line-height: 100rpx;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
+.message .item {
+  margin-top: 20rpx;
 }
-.todo .tab text {
-  width: 50%;
+.message .item li {
+  padding: 30rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.message .item .icon {
+  position: relative;
+  flex: 1;
+  margin-right: 20rpx;
+  margin-right: 50rpx;
+}
+.message .item .icon image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+.message .item .icon .num {
+  background: #fb5849;
+  color: #fff;
+  width: 60rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
   text-align: center;
-  font-size: 34rpx;
+  position: absolute;
+  left: 50rpx;
+  top: -15rpx;
+  font-size: 24rpx;
 }
-.todo .tab text.active {
-  color: #13b7f6;
-  border-bottom: 2px solid #13b7f6;
-}
-.todo .list {
-  margin-top: 120rpx;
-}
-.todo .list li {
-  display: flex;
-  margin: 30rpx;
-  background: #fff;
-  padding: 30rpx 20rpx;
-  flex-direction: column;
-}
-.todo .list .top {
+.message .item .info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 10rpx 0;
 }
-.todo .list .con {
+.message .item .con {
+  height: 30rpx;
+  line-height: 30rpx;
+  width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  padding-top: 10rpx;
   font-size: 28rpx;
-  color: #939399;
+  margin: 10rpx 0;
+  color: #999;
 }
-.todo .list .time {
+.message .item .tit {
+  font-size: 32rpx;
+}
+.message .item .date {
   color: #c4c4cc;
-  font-size: 26rpx;
-}
-.todo .list .tit {
-  position: relative;
-}
-.todo .list .tit .hot {
-  position: absolute;
-  background: #fb5849;
-  top: 0;
-  right: -10rpx;
-  display: block;
-  width: 10rpx;
-  height: 10rpx;
-  border-radius: 20rpx;
+  font-size: 24rpx;
 }

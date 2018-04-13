@@ -62,16 +62,17 @@ Page({
 					password: this.data.password
 				},
 				success: res => {
-					if (!res.data.code) {
+					if (res.statusCode != 200) {
 						myToast('请输入正确的用户名和密码')
 					} else {
+						// 存入sessionId到本地
+						wx.setStorageSync('sessionId', res.data.sessionId)
 						wx.redirectTo({
 							url: '/pages/product/list/list'
 						})
 					}
-					wx.hideLoading()
 				},
-				complete: res => {}
+				complete: res => wx.hideLoading()
 			})
 		}
 	}

@@ -17,6 +17,10 @@
 					</view>
 				</view>
 			</li>
+		</ul>
+	</view>
+	<view class='item' bindtap='onNotice'>
+		<ul>
 			<li>
 				<view class='icon'>
 					<image src='../../images/svg/msg2.svg'></image>

@@ -21,16 +21,16 @@
 			"current": -1,
 			"list": []
 		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
 		"plugin": {
 			"current": -1,
 			"list": []
 		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 12,
+			"current": 10,
 			"list": [
 				{
 					"id": 0,
@@ -105,9 +105,21 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 12,
 					"name": "消息",
-					"pathName": "pages/message/list",
+					"pathName": "pages/message/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "代办事项",
+					"pathName": "pages/message/todo/todo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单列表",
+					"pathName": "pages/order/list/list",
 					"query": ""
 				}
 			]

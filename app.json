@@ -2,21 +2,31 @@
     "pages":[
         "pages/login/login",
         "pages/reg/reg",
-		"pages/index/index",
+
         "pages/agreement/agreement",
         "pages/bill/list",
-        "pages/message/list",
-        "pages/message/todo/list",
-        "pages/message/notice/list",
-        "pages/message/system/list",
+
+        "pages/index/index",
+
+        "pages/order/list/list",
+
+
+        "pages/message/list/list",
+        "pages/message/todo/todo",
+        "pages/message/notice/notice",
+        "pages/message/system/system",
+
         "pages/bank/bank",
         "pages/bank/info",
+
         "pages/password/login/find",
         "pages/password/pay/set",
         "pages/password/pay/modify",
+
         "pages/product/list/list",
 		"pages/product/detail/detail",
 		"pages/product/apply/apply",
+
         "pages/user/about/about",
         "pages/user/certify/certify",
         "pages/user/info/info",

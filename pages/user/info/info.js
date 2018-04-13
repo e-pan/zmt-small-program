@@ -1,116 +1,92 @@
+import {
+    ajax
+} from '../../../utils/util'
+
 const app = getApp()
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    avatar: ''
-  },
-  onSetter() {
-    wx.navigateTo({
-        url: '/pages/user/setter/setter'
-    })
-  },
-  onBill() {
-    wx.navigateTo({
-        url: '/pages/user/bill/bill'
-    })
-  },
-  onBank() {
-    wx.navigateTo({
-        url: '/pages/user/bank/bank'
-    })
-  },
-  onGuidance() {
-    wx.navigateTo({
-        url: '/pages/user/guidance/guidance'
-    })
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    // 设置头像
-    this.setData({
-        avatar: app.globalData.userInfo.avatarUrl
-    })
-    // 获取用户信息
-    // getUserInfo() {
-
-    // }
-    wx.showLoading()
-    wx.request({
-        url: app.globalData.API + '/userMerchant/user/getUserInfoSum.htm',
-        method: 'POST',
-        header: {
-            "content-type": "application/x-www-form-urlencoded"
-        },
-        data: {
-            isChoose : 1
-        },
-        success: res => {
-            const datas = res.data
-            console.log(datas)
-            // if (!res.data.code) {
-            //     myToast(data)
-            // } else {
-            //     wx.redirectTo({url: '/pages/product/list/list'})
-            // }
-        },
-        complete: res => {
-            wx.hideLoading()
+    data: {
+        avatar: '',
+        name: '',
+        userCode: '',
+        navs: [{
+            name: '首页',
+            icon: 'home',
+            active: false,
+            page: '/pages/product/list/list'
+        }, {
+            name: '订单',
+            icon: 'order',
+            active: false,
+            page: '/pages/order/list/list'
+        }, {
+            name: '消息',
+            icon: 'message',
+            active: false,
+            page: '/pages/message/list/list'
+        }, {
+            name: '服务',
+            icon: 'service',
+            active: true,
+            page: '/pages/user/info/info'
+        }]
+    },
+    onSetter() {
+        wx.navigateTo({
+            url: '/pages/user/setter/setter'
+        })
+    },
+    onBill() {
+        wx.navigateTo({
+            url: '/pages/bill/list'
+        })
+    },
+    onBank() {
+        wx.navigateTo({
+            url: '/pages/user/bank/bank'
+        })
+    },
+    onGuidance() {
+        wx.navigateTo({
+            url: '/pages/user/guidance/guidance'
+        })
+    },
+    // 底部导航
+    onNav(e) {
+        if (!e.currentTarget.dataset.isactive) {
+            wx.navigateTo({
+                url: e.currentTarget.dataset.page
+            })
         }
-    })
-  },
+    },
+    onLoad: function(options) {
+        const that = this
+        let sessionId = wx.getStorageSync('sessionId')
+        // 设置头像
+        if (app.globalData.userInfo) {
+            this.setData({
+                avatar: app.globalData.userInfo.avatarUrl
+            })
+        }
+        // 获取用户信息
+        if (sessionId) getUserInfo()
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+        function getUserInfo() {
+            ajax({
+                url: '/userMerchant/user/getUserInfoSum.htm',
+                method: 'POST',
+                sessionId: sessionId,
+                param: {
+                    isChoose: 1
+                },
+                callback: data => {
+                    console.log(data)
+                    that.setData({
+                        userCode: data.data[0].userCode,
+                        name: data.data[0].name
+                    })
+                }
+            })
+        }
+    }
 })

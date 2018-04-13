@@ -101,6 +101,13 @@ picker {
   background: #fff;
   margin-bottom: 20rpx;
 }
+.user-info .item li {
+  display: flex;
+  padding: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f2f2fc;
+}
 .user-info .userInfo {
   display: flex;
   justify-content: space-between;
@@ -116,11 +123,4 @@ picker {
 .user-info .userInfo text {
   font-size: 32rpx;
   padding: 5rpx 0;
-}
-.user-info li {
-  display: flex;
-  padding: 30rpx;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #f2f2fc;
 }

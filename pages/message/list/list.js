@@ -1,15 +1,14 @@
+import {
+    myToast
+} from '../../../utils/util'
+
+const app = getApp()
 Page({
     data: {
-        index: 1,
-        imgUrls: [
-            'http://prod.service.zjzmjr.com/images/test/pic-1.jpg',
-            'http://prod.service.zjzmjr.com/images/test/pic-1.jpg',
-            'http://prod.service.zjzmjr.com/images/test/pic-1.jpg'
-        ],
         navs: [{
             name: '首页',
             icon: 'home',
-            active: true,
+            active: false,
             page: '/pages/product/list/list'
         }, {
             name: '订单',
@@ -19,7 +18,7 @@ Page({
         }, {
             name: '消息',
             icon: 'message',
-            active: false,
+            active: true,
             page: '/pages/message/list/list'
         }, {
             name: '服务',
@@ -28,14 +27,19 @@ Page({
             page: '/pages/user/info/info'
         }]
     },
-    detail() {
+    onTodo() {
         wx.navigateTo({
-            url: '/pages/product/detail/detail'
+            url: '/pages/message/todo/todo'
         })
     },
-    apply() {
+    onNotice() {
         wx.navigateTo({
-            url: '/pages/product/apply/apply'
+            url: '/pages/message/notice/notice'
+        })
+    },
+    onSystem() {
+        wx.navigateTo({
+            url: '/pages/message/system/system'
         })
     },
     // 底部导航
@@ -45,5 +49,8 @@ Page({
                 url: e.currentTarget.dataset.page
             })
         }
+    },
+    onLoad: options => {
+
     }
 })

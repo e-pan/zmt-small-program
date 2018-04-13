@@ -9,12 +9,12 @@ Page({
         navs: [{
             name: '首页',
             icon: 'home',
-            active: true,
+            active: false,
             page: '/pages/product/list/list'
         }, {
             name: '订单',
             icon: 'order',
-            active: false,
+            active: true,
             page: '/pages/order/list/list'
         }, {
             name: '消息',

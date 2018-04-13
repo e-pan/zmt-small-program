@@ -1,27 +1,18 @@
 <view class='bill'>
 	<picker mode='selector' bindchange="changeType" value="{{ typeIndex }}" range="{{ typeArrs }}" range-key='{{ "value" }}'>
-		点击<text>{{ typeArrs[typeIndex].value }}</text>筛选
+		点击<text>{{ typeText }}</text>筛选
     </picker>
 	<ul>
-		<li>
+		<li wx:for='{{ bills }}' wx:key='key'>
 			<view class='first'>
-				<text class='status'>充值<text class='source'>银行代收</text></text>
-				<text class='money'>+123</text>
+				<text class='status'>{{ typeText }}<text class='source' wx:if='{{ item.rewardSource }}'>{{ item.rewardSource }}</text></text>
+				<text class='money'><block wx:if='{{ item.transactionAmount > 0 }}'>+</block>{{ item.transactionAmount }}</text>
 			</view>
 			<view class='second'>
-				<text class='time'>2016/07/06 15:49</text>
-				<text class='balance'>余额：7966</text>
+				<text class='time'>{{ item.payTime }}</text>
+				<text class='balance'>余额：{{ item.remainingFunds }}</text>
 			</view>
 		</li>
-		<li>
-			<view class='first'>
-				<text class='status'>充值<text class='source'>银行代收</text></text>
-				<text class='money'>+123</text>
-			</view>
-			<view class='second'>
-				<text class='time'>2016/07/06 15:49</text>
-				<text class='balance'>余额：7966</text>
-			</view>
-		</li>
+
 	</ul>
 </view>

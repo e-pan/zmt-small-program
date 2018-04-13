@@ -14,19 +14,19 @@ App({
 			success: res => {
 				let { code } = res;
 				if(res.code) {
-					console.log("code:          " +code)
+					//console.log("code:          " +code)
 				}
 			}
 		})
 		// 返回用户已经授权的列表
-		wx.getSetting({
-			success: res => console.log("返回用户已经授权的列表:" + res.authSetting)
-		})
+		// wx.getSetting({
+		// 	success: res => console.log("返回用户已经授权的列表:" + res.authSetting)
+		// })
 	},
 	globalData: {
 		// 全局变量
 		userInfo: null,
 		systemInfo: null,
-		API: 'http://prod.service.zjzmjr.com'
+		API: 'https://prod.service.zjzmjr.com'
 	}
 })

@@ -1,9 +1,11 @@
+<import src='../../../templates/common/footer.wxml' />
+
 <view class='user-info'>
 	<view class='item userInfo' bindtap='onSetter'>
 		<image src='{{ avatar }}' class='avatar'></image>
 		<view>
-			<text>qwe</text>
-			<text>188888888888</text>
+			<text>{{ name }}</text>
+			<text>{{ userCode }}</text>
 		</view>
 		<image src='../../../images/svg/next.svg'></image>
 	</view>
@@ -27,4 +29,5 @@
 			</li>
 		</ul>
 	</view>
+	<template is='footer' data='{{ navs }}' />
 </view>
