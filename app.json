@@ -30,7 +30,10 @@
         "pages/user/about/about",
         "pages/user/certify/certify",
         "pages/user/info/info",
-        "pages/user/setter/setter"
+        "pages/user/setter/setter",
+
+        "pages/user/guidance/list",
+        "pages/user/guidance/detail"
     ],
     "window":{
         "backgroundTextStyle":"light",

@@ -1,9 +1,11 @@
 import {
     myToast,
-    mobileValidate
+    mobileValidate,
+    ajax
 } from '../../../utils/util'
 
 const app = getApp()
+const sessionId = wx.getStorageSync('sessionId')
 Page({
     data: {
         mobile: '',
@@ -47,17 +49,14 @@ Page({
         } else if (!mobileValidate(this.data.mobile)) {
             myToast('请输入正确的手机号')
         } else {
-            wx.showLoading()
-            wx.request({
-                url: app.globalData.API + '/user/sendcode.htm',
+            ajax({
+                url: '/user/sendcode.htm',
                 method: 'POST',
-                header: {
-                    "content-type": "application/x-www-form-urlencoded"
-                },
-                data: {
+                sessionId,
+                param: {
                     type: 2
                 },
-                success: res => {
+                callback: res => {
                     const datas = res.data
                     if (datas.success) {
                         myToast('验证码已发送到您的手机，请注意查收')
@@ -83,8 +82,7 @@ Page({
                     } else {
                         myToast(datas.resultMsg)
                     }
-                },
-                complete: res => wx.hideLoading()
+                }
             })
         }
     },
@@ -100,13 +98,10 @@ Page({
         } else if (this.data.repassword1 != this.data.repassword2) {
             myToast('您输入的两次密码不一致')
         } else {
-            wx.showLoading()
-            wx.request({
-                url: app.globalData.API + '/user/resetpaypwd.htm',
+            ajax({
+                url: '/user/resetpaypwd.htm',
                 method: 'POST',
-                header: {
-                    "content-type": "application/x-www-form-urlencoded"
-                },
+                sessionId,
                 data: {
                     step: 2,
                     password: this.data.password,
@@ -116,12 +111,14 @@ Page({
                 success: res => {
                     const datas = res.data
                     if (datas.success) {
-                        wx.navigateBack()
+                        myToast('修改成功')
+                        setTimeout(() => {
+                            wx.navigateBack()
+                        }, 1000) 
                     } else {
                         myToast(datas.resultMsg)
                     }
-                },
-                complete: res => wx.hideLoading()
+                }
             })
         }
     }

@@ -1,5 +1,27 @@
 @import 'app.less';
 
 .order {
+	.search {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		background: #fff;
+		padding: 20rpx 30rpx;
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
 
+		input {
+			background: @bg-color;
+			color: #333;
+			font-size: 26rpx;
+		}
+		text {
+			color: @main-color;
+		}
+	}
+	.tabs {
+		margin-top: 100rpx;
+	}
 }

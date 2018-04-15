@@ -2,21 +2,21 @@
 	<view class='item userInfo'>
 		<image src='{{ avatar }}' class='avatar'></image>
 		<view>
-			<text>qwe</text>
-			<text>188888888888</text>
+			<text>{{ name }}</text>
+			<text>{{ userCode }}</text>
 		</view>
 
 	</view>
 	<view class='item'>
 		<ul>
-			<li>
+			<li wx:if='{{ identityNo }}'>
 				<text>实名认证</text>
 				<view class='certify'>
 					<image src='../../../images/svg/my-2.svg'></image>
 					<text>已实名</text>
 				</view>
 			</li>
-			<li bindtap='onCertify'>
+			<li bindtap='onCertify' wx:if='{{ !identityNo }}'>
 				<text>实名认证</text>
 				<image src='../../../images/svg/next.svg'></image>
 			</li>
@@ -24,11 +24,11 @@
 				<text>修改登录密码</text>
 				<image src='../../../images/svg/next.svg'></image>
 			</li>
-			<li bindtap='onSetPayPwd'>
+			<li bindtap='onSetPayPwd' wx:if='{{ !payPwd }}'>
 				<text>设置交易密码</text>
 				<image src='../../../images/svg/next.svg'></image>
 			</li>
-			<li bindtap='onModifyPayPwd'>
+			<li bindtap='onModifyPayPwd' wx:if='{{ payPwd }}'>
 				<text>修改交易密码</text>
 				<image src='../../../images/svg/next.svg'></image>
 			</li>

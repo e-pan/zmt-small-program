@@ -48,7 +48,7 @@ Page({
     },
     onGuidance() {
         wx.navigateTo({
-            url: '/pages/user/guidance/guidance'
+            url: '/pages/user/guidance/list'
         })
     },
     // 底部导航

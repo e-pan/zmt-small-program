@@ -1,0 +1,40 @@
+@import 'app.less';
+
+page {
+	background: @bg-color;
+}
+.guidance-list {
+	dl {
+		margin-top: 20rpx;
+	}
+	dt {
+		border-bottom: 1px solid @bg-color;
+		color: #333;
+		background: #fff;
+		padding: 30rpx;
+		width: 100%;
+		display: flex;
+		margin-top: 20rpx;
+	}
+	dd {
+		border-bottom: 1px solid @bg-color;
+		display: flex;
+		padding: 30rpx;
+		background: #fff;
+		justify-content: space-between;
+		align-items: center;
+
+		text {
+			font-size: 28rpx;
+			height: 30rpx;
+			line-height: 30rpx;
+			width: 100%;
+			overflow: hidden;
+			display: block;
+		}
+		image {
+			width: 30rpx;
+			height: 30rpx;
+		}
+	}
+}

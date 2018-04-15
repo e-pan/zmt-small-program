@@ -1,34 +1,34 @@
 <import src='../../../templates/common/footer.wxml' />
 <view class='message'>
-	<view class='item' bindtap='onTodo'>
+	<view class='item'>
 		<ul>
-			<li>
+			<li bindtap='onTodo'>
 				<view class='icon'>
 					<image src='../../../images/svg/msg1.svg'></image>
-					<text class='num'>22</text>
+					<text class='num' wx:if='{{ todoNum }}'>{{ todoNum }}</text>
 				</view>
 				<view >
 					<view class='info'>
 						<text class='tit'>待办事项</text>
-						<text class='date'>01/23</text>
+						<text class='date' wx:if='{{ todoDate }}'>{{ todoDate }}</text>
 					</view>
-					<view class='con'>
-						您已成功提交【汽车担保贷款】申请，稍后征信结果将发送至您的站内消息，请注意查收。如征信结果通过，工作人员将在1-2个工作日内电话联系您。
+					<view class='con' wx:if='{{ todoCon }}'>
+						{{ todoCon }}
 					</view>
 				</view>
 			</li>
-			<li>
+			<li bindtap='onNotice'>
 				<view class='icon'>
 					<image src='../../../images/svg/msg2.svg'></image>
-					<text class='num'>2</text>
+					<text class='num' wx:if='{{ noticeNum }}'>{{ noticeNum }}</text>
 				</view>
 				<view>
 					<view class='info'>
 						<text class='tit'>通知消息</text>
-						<text class='date'>01/23</text>
+						<text class='date' wx:if='{{ noticeDate }}'>{{ noticeDate }}</text>
 					</view>
-					<view class='con'>
-						您已成功提交【汽车担保贷款】申请，稍后征信结果将发送至您的站内消息，请注意查收。如征信结果通过，工作人员将在1-2个工作日内电话联系您。
+					<view class='con' wx:if='{{ noticeCon }}'>
+						{{ noticeCon }}
 					</view>
 				</view>
 			</li>
@@ -39,15 +39,15 @@
 			<li>
 				<view class='icon'>
 					<image src='../../../images/svg/msg3.svg'></image>
-					<text class='num'>2</text>
+					<text class='num' wx:if='{{ systemNum }}'>{{ systemNum }}</text>
 				</view>
 				<view>
 					<view class='info'>
 						<text class='tit'>系统公告</text>
-						<text class='date'>01/23</text>
+						<text class='date' wx:if='{{ systemDate }}'>{{ systemDate }}</text>
 					</view>
-					<view class='con'>
-						您已成功提交【汽车担保贷款】申请，稍后征信结果将发送至您的站内消息，请注意查收。如征信结果通过，工作人员将在1-2个工作日内电话联系您。
+					<view class='con' wx:if='{{ systemCon }}'>
+						{{ systemCon }}
 					</view>
 				</view>
 			</li>

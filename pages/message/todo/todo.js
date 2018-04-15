@@ -1,14 +1,14 @@
 import {
-    myToast
+    myToast,
+    ajax
 } from '../../../utils/util'
 
 const app = getApp()
+const sessionId = wx.getStorageSync('sessionId')
 Page({
     data: {
-        status: 1,
-        lists: [
-            1, 2, 3,1, 2, 3,1, 2, 31, 2, 31, 2, 3
-        ]
+        status: 0,
+        lists: []
     },
     onList(e) {
         this.setData({
@@ -16,15 +16,41 @@ Page({
         })
         this.getList(e.currentTarget.dataset.status)
     },
-    getList: id => {
-        console.log(id)
+    // 获取代办事项列表
+    getList(id) {
+        ajax({
+            url: '/message/user/getMessage.htm',
+            method: 'POST',
+            sessionId,
+            param: {
+                type: 1,
+                sourceTypeId: 0,
+                handleResult: id
+            },
+            callback: data => {
+                if (data.success) {
+                    this.setData({
+                        lists: data.data
+                    })
+                } else {
+                    if (data.code == 'record_not_exsist') {
+                        this.setData({
+                            lists: []
+                        })
+                    } else {
+                        myToast(data.resultMsg)
+                    }
+                }
+            }
+        })
     },
     //下拉刷新
-    onPullDownRefresh: () => {
+    onPullDownRefresh() {
         wx.showNavigationBarLoading()
         wx.showLoading({
             title: '加载中...'
         })
+        this.getList(this.data.status)
         //模拟加载
         setTimeout(function(){
             // complete
@@ -32,5 +58,8 @@ Page({
             wx.stopPullDownRefresh() //停止下拉刷新
             wx.hideLoading()
         },1500);
+    },
+    onLoad: function (option) {
+        this.getList(this.data.status)
     }
 })

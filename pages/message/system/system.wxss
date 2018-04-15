@@ -91,59 +91,23 @@ picker {
 page {
   background: #f2f2fc;
 }
-.message .item {
-  margin-top: 20rpx;
-}
-.message .item li {
-  padding: 30rpx;
+.message-detail li {
   background: #fff;
+  margin: 30rpx 30rpx 0 30rpx;
+  padding: 30rpx;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
-.message .item .icon {
-  position: relative;
-  flex: 1;
-  margin-right: 20rpx;
-  margin-right: 50rpx;
-}
-.message .item .icon image {
-  width: 60rpx;
-  height: 60rpx;
-  margin-left: 20rpx;
-}
-.message .item .icon .num {
-  background: #fb5849;
-  color: #fff;
-  width: 60rpx;
-  height: 40rpx;
-  line-height: 40rpx;
-  border-radius: 20rpx;
-  text-align: center;
-  position: absolute;
-  left: 50rpx;
-  top: -15rpx;
-  font-size: 24rpx;
-}
-.message .item .info {
+.message-detail li .tit {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 10rpx 0;
 }
-.message .item .con {
-  height: 30rpx;
-  line-height: 30rpx;
-  width: 100%;
-  overflow: hidden;
+.message-detail li .con {
+  padding-top: 10rpx;
+  color: #939399;
   font-size: 28rpx;
-  margin: 10rpx 0;
-  color: #999;
 }
-.message .item .tit {
-  font-size: 32rpx;
-}
-.message .item .date {
-  color: #c4c4cc;
-  font-size: 24rpx;
+.message-detail li .date {
+  color: #666;
+  font-size: 26rpx;
 }

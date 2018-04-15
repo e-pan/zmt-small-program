@@ -2,10 +2,12 @@ import {
     myToast,
     mobileValidate,
     pwdValidate,
-    IDcardVailidate
+    IDcardVailidate,
+    ajax
 } from '../../../utils/util'
 
 const app = getApp()
+const sessionId = wx.getStorageSync('sessionId')
 Page({
     data: {
         IDcard: '',
@@ -49,44 +51,35 @@ Page({
         } else if (!mobileValidate(this.data.mobile)) {
             myToast('请输入正确的手机号')
         } else {
-            wx.showLoading()
-            wx.request({
-                url: app.globalData.API + '/user/paycode.htm',
+            ajax({
+                url: '/user/paycode.htm',
                 method: 'POST',
-                header: {
-                    "content-type": "application/x-www-form-urlencoded"
+                param: {
+                    type : 2
                 },
-                data: {
-                    type: 2
-                },
-                success: res => {
-                    const datas = res.data
-                    if (datas.success) {
-                        myToast('验证码已发送到您的手机，请注意查收')
-                        let time = 60,
-                            i = 1,
-                            start = setInterval(function() {
-                                const countDownTime = time - i;
-                                if (i > time - 1) {
-                                    i = 1;
-                                    that.setData({
-                                        message: "获取验证码",
-                                        codeDisabled: false
-                                    })
-                                    clearInterval(start);
-                                } else {
-                                    that.setData({
-                                        message: countDownTime + "秒后重发",
-                                        codeDisabled: true
-                                    })
-                                    i++
-                                }
-                            }, 1000);
-                    } else {
-                        myToast(datas.resultMsg)
-                    }
-                },
-                complete: res => wx.hideLoading()
+                sessionId,
+                callback: data => {
+                    myToast('验证码已发送到您的手机，请注意查收')
+                    let time = 60,
+                    i = 1,
+                    start = setInterval(function() {
+                        const countDownTime = time - i;
+                        if (i > time - 1) {
+                            i = 1;
+                            that.setData({
+                                message: "获取验证码",
+                                codeDisabled: false
+                            })
+                            clearInterval(start);
+                        } else {
+                            that.setData({
+                                message: countDownTime + "秒后重发",
+                                codeDisabled: true
+                            })
+                            i++
+                        }
+                    }, 1000);
+                }
             })
         }
     },
@@ -102,28 +95,27 @@ Page({
         } else if (this.data.paypassword != this.data.repaypassword) {
             myToast('您输入的两次密码不一致')
         } else {
-            wx.showLoading()
-            wx.request({
-                url: app.globalData.API + '/user/setpaypwd.htm',
+            ajax({
+                url: '/user/setpaypwd.htm',
                 method: 'POST',
-                header: {
-                    "content-type": "application/x-www-form-urlencoded"
-                },
-                data: {
+                sessionId,
+                param: {
                     step: 1,
                     IDcard: this.data.IDcard,
                     checkcode: this.data.checkcode
                 },
-                success: res => {
-                    const datas = res.data
-                    if (datas.success) {
-                        wx.navigateBack()
+                callback: data => {
+                    console.log(data)
+                    if (data.success) {
+                        myToast('设置成功')
+                        setTimeout(() => {
+                            wx.navigateBack()
+                        }, 1000)                        
                     } else {
-                        myToast(datas.resultMsg)
+                        myToast(data.resultMsg)
                     }
-                },
-                complete: res => wx.hideLoading()
-            })
+                }
+            });
         }
     }
 })

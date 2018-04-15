@@ -1,4 +1,4 @@
-import { myToast } from '../../utils/util'
+import { myToast, ajax } from '../../utils/util'
 
 const app = getApp()
 Page({
@@ -18,57 +18,51 @@ Page({
         })
     },
     formSubmit(e) {
-        console.log(e.detail.value)
         const that = this
         if (!e.detail.value.name) {
             myToast('请输入持卡人姓名')
         } else if (!e.detail.value.bandCard) {
             myToast('请输入银行卡号')
         } else {
-            wx.showLoading()
-            wx.request({
-                url: app.globalData.API + '/repayment/user/bindBank.htm',
-                method: 'POST',
-                data: {
-                    bankCard: e.detail.value.bandCard,
-                    transactionType: 15
-                },
-                header: {
-                    "content-type": "application/x-www-form-urlencoded"
-                },
-                success: res => {
-                    console.log(res)
-                    const datas = res.data
-                    if (datas.success) {
-                        that.bindCard(datas)
-                    } else {
-                        myToast(datas.resultMsg)
+            let sessionId = wx.getStorageSync('sessionId')
+            if (sessionId) {
+                ajax({
+                    url: '/repayment/user/bindBank.htm',
+                    method: 'POST',
+                    sessionId: sessionId,
+                    param: {
+                        bankCard: e.detail.value.bandCard,
+                        transactionType: 15
+                    },
+                    callback: data => {
+                        if (data.success) {
+                            that.bindCard(data)
+                        } else {
+                            myToast(data.resultMsg)
+                        }
                     }
-                },
-                complate: res => {
-                    wx.hideLoading()
-                }
-            })
+                })
+            }
         }
     },
     // 跳转到连连进行银行卡验证绑定
     bindCard(data) {
-        console.log(data)
-        const formData = data.value
         wx.request({
             url: data.url,
-            data: formData,
+            data: {
+                req_data: data.data
+            },
             method: 'POST',
-            head: {
-                'Content-Type': 'application/json'
+            header: {
+                "content-type": "application/x-www-form-urlencoded"
             },
             success: res => {
-                console.log(res);
+                // TODO 
+                // 提交到了连连支付，但是页面没有跳转过去。
             }
         })
     },
-    onLoad: options => {
-        console.log(options)
+    onLoad: function (options){
         this.data.type = options.type
     }
 })

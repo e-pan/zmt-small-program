@@ -88,26 +88,11 @@ picker {
 .footer .active .service {
   background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
 }
-page {
-  background: #f2f2fc;
+text {
+  padding: 0 30rpx;
+  text-indent: 20rpx;
+  display: block;
 }
-.message-detail li {
-  background: #fff;
-  margin: 30rpx 30rpx 0 30rpx;
-  padding: 30rpx;
-  display: flex;
-  flex-direction: column;
-}
-.message-detail li .tit {
-  display: flex;
-  justify-content: space-between;
-}
-.message-detail li .con {
-  padding-top: 10rpx;
+text.answer {
   color: #939399;
-  font-size: 28rpx;
-}
-.message-detail li .date {
-  color: #666;
-  font-size: 26rpx;
 }

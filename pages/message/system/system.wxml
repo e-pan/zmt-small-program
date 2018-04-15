@@ -1,61 +1,11 @@
-<import src='../../templates/common/footer.wxml' />
-<view class='message'>
-	<view class='item' bindtap='onTodo'>
-		<ul>
-			<li>
-				<view class='icon'>
-					<image src='../../images/svg/msg1.svg'></image>
-					<text class='num'>22</text>
-				</view>
-				<view >
-					<view class='info'>
-						<text class='tit'>待办事项</text>
-						<text class='date'>01/23</text>
-					</view>
-					<view class='con'>
-						您已成功提交【汽车担保贷款】申请，稍后征信结果将发送至您的站内消息，请注意查收。如征信结果通过，工作人员将在1-2个工作日内电话联系您。
-					</view>
-				</view>
-			</li>
-		</ul>
-	</view>
-	<view class='item' bindtap='onNotice'>
-		<ul>
-			<li>
-				<view class='icon'>
-					<image src='../../images/svg/msg2.svg'></image>
-					<text class='num'>2</text>
-				</view>
-				<view>
-					<view class='info'>
-						<text class='tit'>通知消息</text>
-						<text class='date'>01/23</text>
-					</view>
-					<view class='con'>
-						您已成功提交【汽车担保贷款】申请，稍后征信结果将发送至您的站内消息，请注意查收。如征信结果通过，工作人员将在1-2个工作日内电话联系您。
-					</view>
-				</view>
-			</li>
-		</ul>
-	</view>
-	<view class='item' bindtap='onSystem'>
-		<ul>
-			<li>
-				<view class='icon'>
-					<image src='../../images/svg/msg3.svg'></image>
-					<text class='num'>2</text>
-				</view>
-				<view>
-					<view class='info'>
-						<text class='tit'>系统公告</text>
-						<text class='date'>01/23</text>
-					</view>
-					<view class='con'>
-						您已成功提交【汽车担保贷款】申请，稍后征信结果将发送至您的站内消息，请注意查收。如征信结果通过，工作人员将在1-2个工作日内电话联系您。
-					</view>
-				</view>
-			</li>
-		</ul>
-	</view>
-	<template is='footer' data='{{ navs }}' />
+<view class='message-detail'>
+	<ul>
+		<li wx:for='{{ lists }}' wx:key='key'>
+			<view class='tit'>
+				<text>{{ item.title }}</text>
+				<text class='date'>{{ item.messageDate }}</text>
+			</view>
+			<view class='con'>{{ item.context }}</view>
+		</li>
+	</ul>
 </view>

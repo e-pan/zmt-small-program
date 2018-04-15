@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 19,
 			"list": [
 				{
 					"id": 0,
@@ -121,6 +121,35 @@
 					"name": "订单列表",
 					"pathName": "pages/order/list/list",
 					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "编辑银行卡",
+					"pathName": "pages/bank/info",
+					"query": "type=edit"
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/product/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "问题列表",
+					"pathName": "pages/user/guidance/list",
+					"query": ""
+				},
+				{
+					"id": 18,
+					"name": "通知消息",
+					"pathName": "pages/message/notice/notice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单列表",
+					"pathName": "pages/order/list/list"
 				}
 			]
 		}

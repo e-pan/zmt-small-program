@@ -1,0 +1,8 @@
+<view class='guidance-detail'>
+	<text class='question'>
+		{{ question }}
+	</text>
+	<text class='answer'>
+		{{ answer }}
+	</text>
+</view>

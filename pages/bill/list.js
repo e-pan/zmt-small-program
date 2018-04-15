@@ -89,7 +89,7 @@ Page({
             })
         }
     },
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.getBill()
     }
 })

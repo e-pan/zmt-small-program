@@ -88,3 +88,25 @@ picker {
 .footer .active .service {
   background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
 }
+.order .search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.order .search input {
+  background: #f2f2fc;
+  color: #333;
+  font-size: 26rpx;
+}
+.order .search text {
+  color: #13b7f6;
+}
+.order .tabs {
+  margin-top: 100rpx;
+}

@@ -1,16 +1,16 @@
 <view class='todo'>
 	<view class='tab'>
-		<text class='{{ status == 1 ? "active" : "" }}' bindtap='onList' data-status='1'>待处理</text>
-		<text class='{{ status == 2 ? "active" : "" }}' bindtap='onList' data-status='2'>已处理</text>
+		<text class='{{ !status ? "active" : "" }}' bindtap='onList' data-status='0'>待处理</text>
+		<text class='{{ status ? "active" : "" }}' bindtap='onList' data-status='1'>已处理</text>
 	</view>
 	<view class='list'>
 		<ul>
 			<li wx:for='{{ lists }}' wx:key='key' class='active'>
 				<view class='top'>
-					<text class='tit'>代理贷款申请<text class='hot'></text></text>
-					<text class='time'>2018/01/23 10:31</text>
+					<text class='tit'>{{ item.title }}<text class='hot' wx:if='{{ !item.status }}'></text></text>
+					<text class='time'>{{ item.messageDate }}</text>
 				</view>
-				<text class='con'>您已成功提交【汽车担保贷款】申请，稍后征信结果将发送至您的站内消息，请注意查收。如征信结果通过，工作人员将在1-2个工作日内电话联系您。</text>
+				<text class='con'>{{ item.context }}</text>
 			</li>
 		</ul>
 	</view>

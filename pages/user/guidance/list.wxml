@@ -1,0 +1,9 @@
+<view class='guidance-list'>
+	<dl wx:for='{{ guidances }}' wx:key='key'>
+		<dt>{{ item.qaClassName }}</dt>
+		<dd wx:for='{{ item.questionAnswer }}' wx:for-item='questions' wx:key='questions' bindtap='onList' data-question='{{ questions.question }}' data-answer='{{ questions.answer }}'>
+			<text>{{ index + 1 }}. {{ questions.question }}</text>
+			<image src='../../../images/svg/next.svg'></image>
+		</dd>
+	</dl>
+</view>

@@ -2,7 +2,18 @@
 
 <view class='order'>
     <view class='search'>
-
+    	<input type='search' placeholder='输入客户姓名或手机号码' />
+    	<text>搜索</text>
+    	<picker mode='selector' bindchange="changeType" value="{{ filterIndex }}" range="{{ filters }}" range-key='{{ "name" }}'>
+			{{ filters[filterIndex].name }}
+	    </picker>
+    </view>
+    <view class='tabs'>
+    	<ul>
+    		<li wx:for="{{ tabs }}" wx:key='key' data-status='{{ item.status }}'>
+    			{{ item.name }}
+    		</li>
+    	</ul>
     </view>
 	<template is='footer' data='{{ navs }}' />
 </view>
