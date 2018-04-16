@@ -1,0 +1,108 @@
+@import 'app.less';
+
+.order-detail {
+    .user-info {
+        background: @main-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100rpx;
+
+        image {
+            width: 40rpx;
+            height: 40rpx;
+            margin-right: 30rpx;
+        }
+        .loanType {
+            background: #fff;
+            color: @assist-color;
+            font-size: 26rpx;
+            padding: 3rpx 10rpx;
+            margin-left: 30rpx;
+        }
+        .name, .mobile {
+            color: #fff;
+        }
+    }
+    .step {
+        background: #fff;
+        padding: 0 5%;
+        position: relative;
+        height: 150rpx;
+        border-bottom: 1px solid @bg-color;
+
+        .line {
+            position: absolute;
+            height: 2rpx;
+            width: 90%;
+            background: #ddd;
+            top: 50rpx;
+            left: 5%;
+            z-index: 2;
+        }
+        .actievLine {
+            position: absolute;
+            height: 2rpx;
+            width: 90%;
+            background: @main-color;
+            top: 50rpx;
+            left: 5%;
+            z-index: 3;
+        }
+        ul {
+            display: flex;
+            position: absolute;
+            z-index: 4;
+            top: 46rpx;
+            left: 5%;
+            width: 90%;
+        }
+        li {
+            width: 16.6%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .dot {
+                width: 15rpx;
+                height: 15rpx;
+                border-radius: 15rpx;
+                background: #ddd;
+            }
+            text {
+                color: #ddd;
+                padding-top: 25rpx;
+                font-size: 26rpx;
+            }
+        }
+        li.active {
+            .dot {
+                background: @main-color;
+            }
+            text {
+                color: @main-color;
+            }
+        }
+    }
+    .web-status {
+        background: #fff;
+        padding: 20rpx 30rpx;
+        border-bottom: 1px solid @bg-color;
+
+        text {
+            color: @assist-color;
+        }
+    }
+    .option {
+        background: #fff;
+        padding: 30rpx;
+
+        .upload {
+            border: 1px solid @main-color;
+            color: @main-color;
+            padding: 5rpx 20rpx;
+            border-radius: 5rpx;
+        }
+    }
+}

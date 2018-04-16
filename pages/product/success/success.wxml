@@ -1,0 +1,9 @@
+<view class='product-success'>
+	<image src="../../../images/pic/smile.png"></image>
+	<text class='tit'>申请成功！</text>
+	<text class='info'>稍后征信结果将通过消息告知您，</text>
+	<text class='info'>您也可到“订单”查看进度</text>
+	<view>
+		<button bindtap='onSubmit' class='submit-btn '>确定</button>
+	</view>
+</view>

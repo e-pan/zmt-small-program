@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 19,
+			"current": 20,
 			"list": [
 				{
 					"id": 0,
@@ -150,6 +150,24 @@
 					"id": -1,
 					"name": "订单列表",
 					"pathName": "pages/order/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详细",
+					"pathName": "pages/order/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "贷款申请",
+					"pathName": "pages/product/apply/apply",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "贷款申请成功",
+					"pathName": "pages/product/success/success",
 					"query": ""
 				}
 			]

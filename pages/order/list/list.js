@@ -116,7 +116,7 @@ Page({
         lists: [],
         rows: 20,
         page: 1,
-        webStatus : '',
+        webStatus: '',
         search: ''
     },
     // 底部导航
@@ -221,8 +221,9 @@ Page({
     },
     // 进入详情
     onList(e) {
+        wx.setStorageSync('orderDetail', this.data.lists[e.currentTarget.dataset.index])
         wx.navigateTo({
-            url: 'pages/order/detai/detail'
+            url: '/pages/order/detail/detail'
         })
     },
     onLoad: function(option) {

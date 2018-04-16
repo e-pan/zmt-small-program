@@ -1,0 +1,24 @@
+<view class='order-detail'>
+    <view class='user-info'>
+        <text class='loanType'>{{ orderDetail.sourceTypeId ? "保险" : "贷款" }}</text>
+        <text class='name'>{{ orderDetail.user.name }}</text>
+        <text class='mobile'>{{ orderDetail.user.userCode }}</text>
+        <image src='../../../images/svg/call.svg' bindtap='onCall'></image>
+    </view>
+    <view class='step'>
+        <view class='line'></view>
+        <view class='actievLine' style='width: {{ 100 / 6 * (step -1) + ((100 / 6) / 2 - 4) }}%'></view>
+        <ul>
+            <li wx:for='{{ steps }}' wx:key='key' class='{{ index < step  ? "active" : "" }}'>
+                <view class='dot'></view>
+                <text>{{ item.name }}</text>
+            </li>
+        </ul>
+    </view>
+    <view class='web-status'>
+        <text>{{ orderDetail.webStatusCN }}</text>
+    </view>
+    <view class='option'>
+        <text bindtap='onUpload' class='upload'>上传材料</text>
+    </view>
+</view>

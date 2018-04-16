@@ -67,6 +67,7 @@ Page({
 					} else {
 						// 存入sessionId到本地
 						wx.setStorageSync('sessionId', res.data.sessionId)
+						wx.setStorageSync('userInfo', res.data)
 						wx.redirectTo({
 							url: '/pages/product/list/list'
 						})

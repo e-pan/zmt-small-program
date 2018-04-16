@@ -88,118 +88,101 @@ picker {
 .footer .active .service {
   background-image: url('http://prod.service.zjzmjr.com/images/svg/user-h.svg');
 }
-.product-apply picker,
-.product-apply input {
-  font-size: 26rpx;
-  color: #666;
-}
-.product-apply .item {
-  background: #fff;
-  margin-bottom: 20rpx;
-}
-.product-apply .item li {
-  border-bottom: 1px solid #f2f2fc;
-  padding: 30rpx;
+.order-detail .user-info {
+  background: #13b7f6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.product-apply .item .half-box {
-  width: 48%;
-}
-.product-apply .item .half-img {
-  width: 93%;
-  border: 1px dotted #13b7f6;
-  border-radius: 5px;
-  padding: 2% 3%;
-  margin-top: 10rpx;
-  max-height: 200rpx;
-}
-.product-apply .explain {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20rpx;
-  justify-content: flex-end;
-  padding-right: 30rpx;
-}
-.product-apply .explain text {
-  padding-left: 30rpx;
-}
-.product-apply .explain image {
-  width: 30rpx;
-  height: 30rpx;
-  padding-left: 10rpx;
-}
-.product-apply .more-img {
-  width: 100%;
-  margin-top: 20rpx;
-  line-height: auto;
-}
-.product-apply .more-img view {
-  display: block;
-  position: relative;
-  width: 150rpx;
-  height: 150rpx;
-  float: left;
-  margin-right: 20rpx;
-  margin-bottom: 20rpx;
-  border: 1px solid #f3f3f3;
-}
-.product-apply .more-img view:nth-child(4n) {
-  margin-right: 0;
-}
-.product-apply .more-img image {
-  width: 150rpx;
-  height: 150rpx;
-  position: absolute;
-}
-.product-apply .more-img span {
-  position: absolute;
-  z-index: 2;
-  background: #ddd;
-  width: 35rpx;
-  height: 35rpx;
-  line-height: 35rpx;
-  border-radius: 20rpx;
-  text-align: center;
-  color: #fff;
-  top: -17rpx;
-  right: -17rpx;
-  font-size: 25rpx;
-  background: rgba(0, 0, 0, 0.6);
-}
-.product-apply .more-img .add {
-  background: #f3f3f3;
-  color: #bbb;
-  width: 150rpx;
-  font-size: 60rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.product-apply .authorization {
-  padding: 0 30rpx;
-}
-.product-apply .button-group {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  border-top: 1px solid #13b7f6;
-}
-.product-apply .button-group text {
-  width: 40%;
-  display: flex;
-  align-items: center;
   height: 100rpx;
-  line-height: 100rpx;
-  justify-content: center;
 }
-.product-apply .button-group text:last-child {
-  border-left: 1px solid #13b7f6;
-  background: #13b7f6;
+.order-detail .user-info image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.order-detail .user-info .loanType {
+  background: #fff;
+  color: #fb5849;
+  font-size: 26rpx;
+  padding: 3rpx 10rpx;
+  margin-left: 30rpx;
+}
+.order-detail .user-info .name,
+.order-detail .user-info .mobile {
   color: #fff;
-  font-size: 34rpx;
-  width: 60%;
+}
+.order-detail .step {
+  background: #fff;
+  padding: 0 5%;
+  position: relative;
+  height: 150rpx;
+  border-bottom: 1px solid #f2f2fc;
+}
+.order-detail .step .line {
+  position: absolute;
+  height: 2rpx;
+  width: 90%;
+  background: #ddd;
+  top: 50rpx;
+  left: 5%;
+  z-index: 2;
+}
+.order-detail .step .actievLine {
+  position: absolute;
+  height: 2rpx;
+  width: 90%;
+  background: #13b7f6;
+  top: 50rpx;
+  left: 5%;
+  z-index: 3;
+}
+.order-detail .step ul {
+  display: flex;
+  position: absolute;
+  z-index: 4;
+  top: 46rpx;
+  left: 5%;
+  width: 90%;
+}
+.order-detail .step li {
+  width: 16.6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.order-detail .step li .dot {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 15rpx;
+  background: #ddd;
+}
+.order-detail .step li text {
+  color: #ddd;
+  padding-top: 25rpx;
+  font-size: 26rpx;
+}
+.order-detail .step li.active .dot {
+  background: #13b7f6;
+}
+.order-detail .step li.active text {
+  color: #13b7f6;
+}
+.order-detail .web-status {
+  background: #fff;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #f2f2fc;
+}
+.order-detail .web-status text {
+  color: #fb5849;
+}
+.order-detail .option {
+  background: #fff;
+  padding: 30rpx;
+}
+.order-detail .option .upload {
+  border: 1px solid #13b7f6;
+  color: #13b7f6;
+  padding: 5rpx 20rpx;
+  border-radius: 5rpx;
 }

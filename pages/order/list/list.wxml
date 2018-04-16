@@ -17,7 +17,7 @@
     </view>
     <view class='lists'>
         <ul>
-            <li wx:for='{{ lists }}' wx:key='key' bindtap='onList'>
+            <li wx:for='{{ lists }}' wx:key='key' data-index='{{ index }}' bindtap='onList'>
                 <view class='left'>
                     <view class='top'>
                         <text class='name'>{{ item.user.name }}</text>

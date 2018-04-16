@@ -9,6 +9,7 @@
         "pages/index/index",
 
         "pages/order/list/list",
+        "pages/order/detail/detail",
 
 
         "pages/message/list/list",
@@ -26,6 +27,7 @@
         "pages/product/list/list",
 		"pages/product/detail/detail",
 		"pages/product/apply/apply",
+        "pages/product/success/success",
 
         "pages/user/about/about",
         "pages/user/certify/certify",
