@@ -97,13 +97,14 @@ const IDcardVailidate = card => {
 //     }
 // })
 const ajax = obj => {
+    const sessionId = wx.getStorageSync('sessionId')
     wx.showLoading()
     wx.request({
         url: global.host + obj.url,
         method: obj.method,
         header: {
-            "content-type": "application/x-www-form-urlencoded",
-            "Cookie": "JSESSIONID=" + obj.sessionId
+            'content-type': 'application/x-www-form-urlencoded',
+            'Cookie': 'JSESSIONID=' + sessionId || obj.sessionId
         },
         data: obj.param,
         success: res => {

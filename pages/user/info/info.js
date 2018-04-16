@@ -75,7 +75,7 @@ Page({
             ajax({
                 url: '/userMerchant/user/getUserInfoSum.htm',
                 method: 'POST',
-                sessionId: sessionId,
+                sessionId,
                 param: {
                     isChoose: 1
                 },

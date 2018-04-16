@@ -58,7 +58,7 @@ Page({
             ajax({
                 url: '/account/getAccountBalanceType.htm',
                 method: 'POST',
-                sessionId: sessionId,
+                sessionId,
                 param: {
                     type: that.data.typeIndex
                 },

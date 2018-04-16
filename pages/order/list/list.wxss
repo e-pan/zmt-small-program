@@ -94,19 +94,121 @@ picker {
   left: 0;
   z-index: 2;
   background: #fff;
-  padding: 20rpx 30rpx;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
+  height: 100rpx;
 }
 .order .search input {
   background: #f2f2fc;
   color: #333;
   font-size: 26rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 330rpx;
+  padding: 0 20rpx;
+  margin-left: 30rpx;
 }
 .order .search text {
+  border-radius: 5rpx;
+  font-size: 28rpx;
+  color: #777;
+  background: #f2f2fc;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 20rpx;
+}
+.order .search picker {
+  width: 200rpx;
+  text-align: right;
+  margin-right: 30rpx;
+  font-size: 28rpx;
   color: #13b7f6;
 }
 .order .tabs {
-  margin-top: 100rpx;
+  position: fixed;
+  top: 100rpx;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+.order .tabs ul {
+  display: flex;
+  height: 80rpx;
+  border-top: 1px solid #f2f2fc;
+  background: #fff;
+  width: 100%;
+}
+.order .tabs li {
+  font-size: 28rpx;
+  color: #939399;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order .tabs li.active {
+  color: #13b7f6;
+  border-bottom: 1px solid #13b7f6;
+}
+.order .lists {
+  margin-top: 200rpx;
+  margin-bottom: 130rpx;
+}
+.order .lists li {
+  margin: 20rpx 30rpx 0 30rpx;
+  padding: 20rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order .lists image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.order .lists .left {
+  display: flex;
+  flex-direction: column;
+}
+.order .lists .left .top {
+  margin-bottom: 10rpx;
+}
+.order .lists .left .top text {
+  display: inline-block;
+}
+.order .lists .left .mobile {
+  width: 100%;
+  color: #939399;
+  font-size: 28rpx;
+}
+.order .lists .left .name {
+  font-size: 32rpx;
+}
+.order .lists .left .loanType {
+  border: 1px solid #fb5849;
+  color: #fb5849;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  padding: 0 10rpx;
+  border-radius: 5rpx;
+}
+.order .lists .right {
+  display: flex;
+  align-items: center;
+}
+.order .lists .right .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.order .lists .right .status {
+  color: #13b7f6;
+}
+.order .lists .right .time {
+  color: #939399;
+  font-size: 28rpx;
+  margin-top: 10rpx;
 }

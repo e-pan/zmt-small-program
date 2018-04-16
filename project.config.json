@@ -149,7 +149,8 @@
 				{
 					"id": -1,
 					"name": "订单列表",
-					"pathName": "pages/order/list/list"
+					"pathName": "pages/order/list/list",
+					"query": ""
 				}
 			]
 		}

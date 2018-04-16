@@ -25,7 +25,7 @@ Page({
             ajax({
                 url: '/bank/bankQuery.htm',
                 method: 'POST',
-                sessionId: sessionId,
+                sessionId,
                 param: {},
                 callback: data => {
                     if (data.success) {

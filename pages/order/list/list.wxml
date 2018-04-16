@@ -2,18 +2,38 @@
 
 <view class='order'>
     <view class='search'>
-    	<input type='search' placeholder='输入客户姓名或手机号码' />
-    	<text>搜索</text>
-    	<picker mode='selector' bindchange="changeType" value="{{ filterIndex }}" range="{{ filters }}" range-key='{{ "name" }}'>
+    	<input type='search' value='{{ search }}' placeholder='输入客户姓名或手机号码' bindinput='getSearch' />
+    	<text bindtap='onSearch'>搜索</text>
+    	<picker mode='selector' bindchange="changeStatus" value="{{ filterIndex }}" range="{{ filters }}" range-key='{{ "name" }}'>
 			{{ filters[filterIndex].name }}
 	    </picker>
     </view>
     <view class='tabs'>
     	<ul>
-    		<li wx:for="{{ tabs }}" wx:key='key' data-status='{{ item.status }}'>
+    		<li wx:for="{{ tabs }}" wx:key='key' data-status='{{ item.status }}' class='{{ item.active ? "active" : "" }}' data-index='{{ index }}' bindtap='onTabs'>
     			{{ item.name }}
     		</li>
     	</ul>
+    </view>
+    <view class='lists'>
+        <ul>
+            <li wx:for='{{ lists }}' wx:key='key' bindtap='onList'>
+                <view class='left'>
+                    <view class='top'>
+                        <text class='name'>{{ item.user.name }}</text>
+                        <text class='loanType'>{{ item.sourceTypeId ? "保险" : "贷款" }}</text>
+                    </view>
+                    <text class='mobile'>{{ item.user.userCode }}</text>
+                </view>
+                <view class='right'>
+                    <view class='info'>
+                        <text class='status'>{{ item.webStatusCN }}</text>
+                        <text class='time'>{{ item.registerTime }}</text>
+                    </view>
+                    <image src='../../../images/svg/next.svg'></image>
+                </view>
+            </li>
+        </ul>
     </view>
 	<template is='footer' data='{{ navs }}' />
 </view>

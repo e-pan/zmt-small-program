@@ -29,7 +29,7 @@ Page({
                 ajax({
                     url: '/repayment/user/bindBank.htm',
                     method: 'POST',
-                    sessionId: sessionId,
+                    sessionId,
                     param: {
                         bankCard: e.detail.value.bandCard,
                         transactionType: 15
@@ -57,7 +57,7 @@ Page({
                 "content-type": "application/x-www-form-urlencoded"
             },
             success: res => {
-                // TODO 
+                // TODO
                 // 提交到了连连支付，但是页面没有跳转过去。
             }
         })

@@ -48,7 +48,7 @@ Page({
                     ajax({
                         url: '/j_spring_security_logout',
                         method: 'GET',
-                        sessionId: sessionId,
+                        sessionId,
                         param: {},
                         callback: data => {
                             if (data.success) {
@@ -79,7 +79,7 @@ Page({
             ajax({
                 url: '/userMerchant/user/getUserInfoSum.htm',
                 method: 'POST',
-                sessionId: sessionId,
+                sessionId,
                 param: {
                     isChoose: 1
                 },
