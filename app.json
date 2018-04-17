@@ -1,16 +1,15 @@
 {
     "pages":[
+		"pages/index/index",
+
         "pages/login/login",
         "pages/reg/reg",
 
         "pages/agreement/agreement",
         "pages/bill/list",
 
-        "pages/index/index",
-
         "pages/order/list/list",
         "pages/order/detail/detail",
-
 
         "pages/message/list/list",
         "pages/message/todo/todo",

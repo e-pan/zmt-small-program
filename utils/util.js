@@ -139,7 +139,7 @@ const ajax = obj => {
 }
 
 // 自动登录
-const again = () => {
+const again = callback => {
     let { userName, springtoken, sessionId } = wx.getStorageSync('userInfo')
     wx.request({
         url: global.host + '/yztz_user_login_check.htm',
@@ -156,7 +156,7 @@ const again = () => {
             // 存入sessionId，userInof到本地
             wx.setStorageSync('sessionId', res.data.sessionId)
             wx.setStorageSync('userInfo', res.data)
-            obj.callback && obj.callback(res.data)
+            callback && callback(res.data)
         }
     })
 }

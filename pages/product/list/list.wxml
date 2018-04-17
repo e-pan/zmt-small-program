@@ -9,17 +9,17 @@
 		</block>
 	</swiper>
 	<view class='tabs'>
-		<view>
+		<view bindtap='onOrder'>
 			<image src='../../../images/icon/icon-11.png'></image>
 			<text>我的客户</text>
 		</view>
-		<view>
+		<view bindtap='onTodo'>
 			<image src='../../../images/icon/icon-9.png'></image>
 			<text>待办事项</text>
 		</view>
-		<view>
+		<view bindtap='onBill'>
 			<image src='../../../images/icon/icon-10.png'></image>
-			<text>统计</text>
+			<text>账单</text>
 		</view>
 	</view>
 	<view class='products'>

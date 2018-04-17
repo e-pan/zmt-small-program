@@ -28,6 +28,21 @@ Page({
             page: '/pages/user/info/info'
         }]
     },
+    onOrder() {
+        wx.navigateTo({
+            url: '/pages/order/list/list'
+        })
+    },
+    onTodo() {
+        wx.navigateTo({
+            url: '/pages/message/todo/todo'
+        })
+    },
+    onBill() {
+        wx.navigateTo({
+            url: '/pages/bill/list'
+        })
+    },
     detail() {
         wx.navigateTo({
             url: '/pages/product/detail/detail'
