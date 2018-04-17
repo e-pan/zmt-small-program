@@ -1,4 +1,4 @@
-# 微信小程序
+# 微信小程序(中茗通)
 
 ## 主要功能有
 
@@ -9,7 +9,6 @@
 * 消息通知、代办事项、系统公告；
 * 代理贷款申请、生成申请之后的业务操作；
 * 用户中心的实名认证、登出等。
-
 
 ## 使用过程中遇见的问题
 
@@ -33,6 +32,7 @@
       </dd>
     </dl>
   ```
+
 * [template](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/template.html)  WXML模板
 * 公用模板引用：首先定义wxml文件，然后在<template name='nav' />标签上添加name属性和值，该值为模板名称。想使用该模板时，现将其引用进来<import src='nav.wxml' />，然后在需要位置插入模板<template is="nav" data="{{...item}}"/>,使用is属性，声明需要的使用的模板，然后将模板所需要的 data 传入。
   
@@ -53,7 +53,7 @@
     </picker>
   ```
   
-### 目录解析
+## 目录解析
 
   <pre>
     ├── images
@@ -85,7 +85,7 @@
     ├── gulpfile.js ==> gulp运行文件
   </pre>
 
-### 编译&运行
+## 编译&运行
 
     $ git clone git@github.com:e-pan/zmt-small-program.git
 
@@ -96,4 +96,4 @@
 项目导入到微信开发者工具，编译...
 
 
-### 小程序二维码
+## 小程序二维码
