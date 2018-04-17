@@ -173,16 +173,17 @@ picker {
   padding: 20rpx 30rpx;
   border-bottom: 1px solid #f2f2fc;
 }
-.order-detail .web-status text {
+.order-detail .web-status .status {
   color: #fb5849;
 }
 .order-detail .option {
   background: #fff;
   padding: 30rpx;
 }
-.order-detail .option .upload {
+.order-detail .option .btn {
   border: 1px solid #13b7f6;
   color: #13b7f6;
   padding: 5rpx 20rpx;
   border-radius: 5rpx;
+  font-size: 26rpx;
 }

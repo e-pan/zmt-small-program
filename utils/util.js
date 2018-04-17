@@ -97,25 +97,66 @@ const IDcardVailidate = card => {
 //     }
 // })
 const ajax = obj => {
-    const sessionId = wx.getStorageSync('sessionId')
-    wx.showLoading()
-    wx.request({
-        url: global.host + obj.url,
-        method: obj.method,
-        header: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'Cookie': 'JSESSIONID=' + sessionId || obj.sessionId
-        },
-        data: obj.param,
-        success: res => {
-            if (res.statusCode != 200) {
-                myToast(res.data.resultMsg)
-            } else {
-                obj.callback && obj.callback(res.data)
+    const { sessionId } = wx.getStorageSync('userInfo')
+    if (sessionId) {
+        wx.showLoading()
+        wx.request({
+            url: global.host + obj.url,
+            method: obj.method,
+            header: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'Cookie': 'JSESSIONID=' + sessionId || obj.sessionId
+            },
+            data: obj.param,
+            success: res => {
+                if (res.statusCode != 200) {
+                    myToast(res.data.resultMsg)
+                } else {
+                    if (res.data.code == 405) {
+                        // 如果本地有用户信息做自动登录，没有进入登录页面
+                        const userInfo = wx.getStorageSync('userInfo')
+                        if (wx.getStorageSync('userInfo')) {
+                            again(obj.callback)
+                        } else {
+                            wx.redirectTo({
+                                url: '/pages/login/login'
+                            })
+                        }
+                    } else {
+                        obj.callback && obj.callback(res.data)
+                    }
+                }
+            },
+            complete: () => {
+                wx.hideLoading()
             }
+        })
+    } else {
+        wx.navigateTo({
+            url: '/pages/login/login'
+        })
+    }
+}
+
+// 自动登录
+const again = () => {
+    let { userName, springtoken, sessionId } = wx.getStorageSync('userInfo')
+    wx.request({
+        url: global.host + '/yztz_user_login_check.htm',
+        method: 'POST',
+        header: {
+            'content-type': 'application/x-www-form-urlencoded'
         },
-        complete: () => {
-            wx.hideLoading()
+        data: {
+            username: userName,
+            password: "123456",
+            springtoken: springtoken
+        },
+        success: res => {
+            // 存入sessionId，userInof到本地
+            wx.setStorageSync('sessionId', res.data.sessionId)
+            wx.setStorageSync('userInfo', res.data)
+            obj.callback && obj.callback(res.data)
         }
     })
 }

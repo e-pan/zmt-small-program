@@ -154,6 +154,8 @@ Page({
         this.setData({
             orderDetail: wx.getStorageSync('orderDetail')
         })
+        console.log(this.data.orderDetail)
+
         this.getBank()
         this.getDepartment()
     },

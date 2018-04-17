@@ -16,9 +16,27 @@
         </ul>
     </view>
     <view class='web-status'>
-        <text>{{ orderDetail.webStatusCN }}</text>
+        <text class='status'>{{ orderDetail.webStatusCN }}</text>
+        <text>{{ orderDetail.memo  }}</text>
     </view>
     <view class='option'>
-        <text bindtap='onUpload' class='upload'>上传材料</text>
+        <text class='btn' bindtap='onUpload'  wx:if='{{ orderDetail.webStatus == 10 || orderDetail.webStatus == 510 || orderDetail.webStatus == 520 || orderDetail.webStatus == 530 || orderDetail.webStatus == 540 || orderDetail.webStatus == 550 || orderDetail.webStatus == 560 || orderDetail.webStatus == 570 || orderDetail.webStatus == 80 || orderDetail.webStatus == 90 || orderDetail.webStatus == 580 || orderDetail.webStatus == 130 || orderDetail.webStatus == 190 || orderDetail.webStatus == 140 || orderDetail.webStatus == 590 || orderDetail.webStatus == 600 || orderDetail.webStatus == 610 }}'>上传材料</text>
+        <text class='btn' bindtap='onOrder'  wx:if='{{ orderDetail.webStatus == 530 || orderDetail.webStatus == 560 || orderDetail.webStatus == 570 || orderDetail.webStatus == 80 || orderDetail.webStatus == 90 || orderDetail.webStatus == 580 }}'>沟通单</text>
+        <text class='btn' bindtap='onChangeBank'  wx:if='{{ orderDetail.webStatus == 530 || orderDetail.webStatus == 130 || orderDetail.webStatus == 140 || orderDetail.webStatus == 190 || orderDetail.webStatus == 590 }}'>更换银行</text>
+        <text class='btn' bindtap='onHangup'  wx:if='{{ (orderDetail.webStatus == 530 || orderDetail.webStatus == 130) && (orderDetail.hangup.isHangUp == 1 || orderDetail.hangup.guarantor1IsHangUp == 1 || orderDetail.hangup.guarantor2IsHangUp == 1 || orderDetail.hangup.spouseIsHangUp == 1) }}'>挂起补录</text>
+        <text class='btn' bindtap='onApply'  wx:if='{{ orderDetail.webStatus == 590 || orderDetail.webStatus == 600 }}'>理赔申请</text>
+        <text class='btn' bindtap='onRepayment'  wx:if='{{ orderDetail.webStatus == 590 || orderDetail.webStatus == 600 }}'>提前还贷</text>
+    </view>
+    <view class='content'>
+        <!-- 征信中  -->
+        <view v-if="orderDetail.webStatus == 10 || orderDetail.webStatus == 510">
+            <view class=''>
+
+            </view>
+        </view>
+        <!-- 再申请审核中  不符合要求-->
+        <view wx:if='{{ orderDetail.webStatus == 520 }}'>
+            <text>同一个客户重复提交申请，需经过人工审核</text>
+        </view>
     </view>
 </view>
