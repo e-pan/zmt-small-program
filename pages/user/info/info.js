@@ -69,9 +69,7 @@ Page({
             })
         }
         // 获取用户信息
-        if (sessionId) getUserInfo()
-
-        function getUserInfo() {
+        if (sessionId) {
             ajax({
                 url: '/userMerchant/user/getUserInfoSum.htm',
                 method: 'POST',

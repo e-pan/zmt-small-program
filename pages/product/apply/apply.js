@@ -27,7 +27,7 @@ Page({
         isMarry: false,
         isguarantee1: false,
         isguarantee2: false,
-        step: true,
+        step: false,
 
         tempFilePaths: '',
         IDcardUp: '../../../images/ID-car-u.png',
