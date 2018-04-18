@@ -97,3 +97,6 @@
 
 
 ## 小程序二维码
+
+ ![let](https://github.com/e-pan/zmt-small-program/blob/master/images/ERcode.jpg)
+ 
