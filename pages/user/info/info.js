@@ -43,7 +43,7 @@ Page({
     },
     onBank() {
         wx.navigateTo({
-            url: '/pages/user/bank/bank'
+            url: '/pages/bank/bank'
         })
     },
     onGuidance() {
